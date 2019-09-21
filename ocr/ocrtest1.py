@@ -6,8 +6,8 @@ from google.cloud import vision
 import io
 
 # This is 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\Users\User\Documents\me.nu\ocr\ocrtest1-824f812b3427.json"
-
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\User\Documents\me.nu\ocr\ocrtest1-824f812b3247.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\shjan\Downloads\ocrtest1-824f812b3247.json"
 
 
 # # Imports the Google Cloud client library
@@ -35,7 +35,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\Users\User\Documents\me.nu\oc
 
 
 def load_words():
-    with open('ocr\words_alpha.txt') as word_file:
+    with open(r"ocr\words_alpha.txt") as word_file:
         valid_words = set(word_file.read().split())
 
     return valid_words
@@ -52,7 +52,7 @@ def detect_text(path, savepath):
 
 
 
-    file1 = io.open("ocr\\textfiles\\" + savepath + ".txt","w", encoding="utf-8")
+    file1 = io.open("ocr\\menu_tests\\" + savepath + ".txt","w", encoding="utf-8")
 
 
     client = vision.ImageAnnotatorClient()
