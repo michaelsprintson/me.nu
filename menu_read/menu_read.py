@@ -12,14 +12,19 @@ This file reads menu OCR results from myfile.txt and dumps json dictionary of me
 #print(os.getcwd())
 pref = open("menu_read\pref_sample.txt", "r") #load user preferences txt
 pref_lines = pref.readlines()
-budget = float(pref_lines[0].strip())
+#budget = float(pref_lines[0].strip())
+budget = 100.0
 eats_meat = bool(pref_lines[1].strip())
 user_likes = (pref_lines[2].strip().split())
 
 
 #menu = io.open("ocr\myfile.txt", "r", encoding="utf-8")
 #menu = io.open("ocr\menu_tests\soups.txt", "r", encoding="utf-8")
-menu = io.open("ocr\menu_tests\weirdapps.txt", "r", encoding="utf-8")
+#menu = io.open("ocr\menu_tests\weirdapps.txt", "r", encoding="utf-8")
+menu = io.open("ocr\menu_tests\pic5test.txt", "r", encoding="utf-8")
+#menu = io.open("ocr\menu_tests\pic7test.txt", "r", encoding="utf-8")
+
+
 
 menu_lines = menu.readlines()
 print( menu_lines, '_____________________________')
@@ -33,7 +38,7 @@ for lineidx in range(len(menu_lines)):
     item = menu_lines[lineidx].strip()
     if (len(item) >= 4) and (item[3].isdigit() or ((not item[0].isdigit() and item[1].isdigit()))):
         #((len(item) > 4) and not (len(item) > 1 and not item[0].isdigit() and not item[1].isdigit())):
-        print(item, 'added')
+        #print(item, 'added')
         remove_bad.append(menu_lines[lineidx])
 
 # print(len(remove_bad), 'the number of lines in menu ')
@@ -41,50 +46,77 @@ for lineidx in range(len(menu_lines)):
 
 # getting the end index for each section of the menu
 # each section is a section of the dishes, or the prices of the dishes
-for lineidx in range(len(remove_bad)):
-    if (remove_bad[lineidx][0]).isdigit():  # if its a price
-        sec1item = lineidx
-        print (sec1item, 'sec1item')
-        break
 
-for lineidx in range(sec1item, len(remove_bad)):
-    if not (remove_bad[lineidx][0]).isdigit():
-        sec1price = lineidx
-        print (sec1price, 'sec1price')
-        break
+def findidx(usemenu, findprice):
+    for lineidx in range(len(usemenu)):
+        if findprice:
+            if (usemenu[lineidx][0]).isdigit():  # if its a price
+                sectionidx = lineidx
+                break
+        else:  # if its a food item
+            if not (usemenu[lineidx][0]).isdigit():
+                sectionidx = lineidx
+                break
+        if lineidx == len(usemenu)- 1:
+            return len(usemenu)- 1
+    return sectionidx
 
-for lineidx in range(sec1price, len(remove_bad)):
-    if (remove_bad[lineidx][0]).isdigit():
-        sec2item = lineidx
-        print (sec2item, 'sec2item')
-        break
 
-for lineidx in range(sec2item, len(remove_bad)):
-    if not (remove_bad[lineidx][0]).isdigit():
-        sec2price = lineidx
-        print (sec2price, 'sec2price')
-        break
+sec1item = findidx(remove_bad, True)
+sec1price = findidx(remove_bad[sec1item :], False) + sec1item
 
-for lineidx in range(sec2price, len(remove_bad)):
-    if (remove_bad[lineidx][0]).isdigit():
-        sec3item = lineidx
-        print(sec3item, 'sec3i')
-        break
+sec2item = findidx(remove_bad[sec1price :], True) + sec1price
+sec2price = findidx(remove_bad[sec2item :], False) + sec2item
 
-for lineidx in range(sec3item, len(remove_bad)):
-    if not (remove_bad[lineidx][0]).isdigit():
-        sec3price = lineidx
-        print (sec3price, 'sec3')
-        break
+sec3item = findidx(remove_bad[sec2price :], True) + sec2price
+sec3price = findidx(remove_bad[sec3item :], False) + sec3item
+
+
+# for lineidx in range(len(remove_bad)):
+#     if (remove_bad[lineidx][0]).isdigit():  # if its a price
+#         sec1item = lineidx
+#         print (sec1item, 'sec1item')
+#         break
+#
+# for lineidx in range(sec1item, len(remove_bad)):
+#     if not (remove_bad[lineidx][0]).isdigit():
+#         sec1price = lineidx
+#         print (sec1price, 'sec1price')
+#         break
+#
+# for lineidx in range(sec1price, len(remove_bad)):
+#     if (remove_bad[lineidx][0]).isdigit():
+#         sec2item = lineidx
+#         print (sec2item, 'sec2item')
+#         break
+#
+# for lineidx in range(sec2item, len(remove_bad)):
+#     if not (remove_bad[lineidx][0]).isdigit():
+#         sec2price = lineidx
+#         print (sec2price, 'sec2price')
+#         break
+#
+# for lineidx in range(sec2price, len(remove_bad)):
+#     if (remove_bad[lineidx][0]).isdigit():
+#         sec3item = lineidx
+#         print(sec3item, 'sec3i')
+#         break
+#
+# for lineidx in range(sec3item, len(remove_bad)):
+#     if not (remove_bad[lineidx][0]).isdigit():
+#         sec3price = lineidx
+#         print (sec3price, 'sec3')
+#         break
 
 sec1 = remove_bad[0: sec1item]
 print (sec1,'sec1')
 print ("_______________")
 sec1prices = remove_bad[sec1item: sec1price]
+print (sec1prices, '1prices')
 
 sec2 = remove_bad[sec1price: sec2item]
-sec2prices = remove_bad[sec2item: sec2price]
 print (sec2,'sec2')
+sec2prices = remove_bad[sec2item: sec2price]
 print ("_______________")
 
 

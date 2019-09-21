@@ -2,6 +2,8 @@ import io
 import os
 import re
 import json
+from google.cloud import vision
+import io
 
 # This is 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\Users\User\Documents\me.nu\ocr\ocrtest1-824f812b3427.json"
@@ -32,12 +34,23 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\Users\User\Documents\me.nu\oc
 #     print(label.description)
 
 
+def load_words():
+    with open('ocr\words_alpha.txt') as word_file:
+        valid_words = set(word_file.read().split())
+
+    return valid_words
+
+
+
+d = load_words()
+
+
 
 
 def detect_text(path, savepath):
     """Detects text in the file."""
-    from google.cloud import vision
-    import io
+
+
 
     file1 = io.open("ocr\\menu_tests\\" + savepath + ".txt","w", encoding="utf-8")
 
@@ -51,15 +64,22 @@ def detect_text(path, savepath):
 
     response = client.text_detection(image=image)
     texts = response.text_annotations
-    #print('Texts:')
 
-    #print(type(texts[0].description))
-    new_texts = texts[0].description.split('\n')
-    #print(new_texts)
+    for text in texts[0].description.split('\n'):
+        text_no_chinese = re.sub("([^\x82\x00-\x7F])+"," ", text)
+        
+        #print(text_no_chinese)
 
-    for text in new_texts:
-        text_no_chinese = re.sub("([^\x82\x00-\x7F])+","", text)
-        file1.writelines(text_no_chinese + '\n')
+        text_lst = []
+        # if not text_no_chinese.isdigit():
+        text_lst = text_no_chinese.split()
+        
+        first_word = text_lst[0] if text_lst else ''
+        if first_word and not first_word[-1].isdigit():
+            first_word = first_word[:-1]
+
+
+        file1.writelines(first_word + ' ' + ' '.join([word for word in text_lst[1:] if (len(word) > 2 and word.lower() in d)]) + '\n')
 
     file1.close()
 
@@ -76,10 +96,17 @@ def detect_text(path, savepath):
 
 
 
-# run test with a picture
-#detect_text('ocr\menupictures\pic3.jpg')
 
-for i in range(1, 20):
-    pic_loc = 'ocr\menupictures\weirdpic\wpic' + str(i) + '.jpg'
-    weird_file_name = 'weirdfiletest' + str(i)
-    detect_text(pic_loc, weird_file_name)
+
+# run test with normal pictures
+detect_text('ocr\menupictures\pic5.jpg', 'pic5test')
+
+
+
+# run test with weird pictures
+
+
+# for i in range(1, 20):
+#     pic_loc = 'ocr\menupictures\weirdpic\wpic' + str(i) + '.jpg'
+#     weird_file_name = 'weirdfiletest' + str(i)
+#     detect_text(pic_loc, weird_file_name)
