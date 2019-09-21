@@ -10,7 +10,13 @@ This file reads menu OCR results from myfile.txt and dumps json dictionary of me
 
 
 #print(os.getcwd())
-#pref = io.open("pref.txt", "r")
+pref = open("menu_read\pref_sample.txt", "r") #load user preferences txt
+pref_lines = pref.readlines()
+budget = float(pref_lines[0].strip())
+eats_meat = bool(pref_lines[1].strip())
+user_likes = (pref_lines[2].strip().split())
+
+
 menu = io.open("ocr\myfile.txt", "r", encoding="utf-8")
 menu_lines = menu.readlines()
 #print(len(menu_lines)), 'l'
@@ -39,6 +45,7 @@ for lineidx in range(len(remove_bad)):
 for lineidx in range(sec1item, len(remove_bad)):
     if not (remove_bad[lineidx][0]).isdigit():
         sec1price = lineidx
+        print (sec1price, 'sec1')
         # print (sec1price, 'sec1price')
         break
 
@@ -70,7 +77,7 @@ sec1 = remove_bad[0: sec1item]
 sec1prices = remove_bad[sec1item: sec1price]
 sec2 = remove_bad[sec1price: sec2item]
 sec2prices = remove_bad[sec2item: sec2price]
-sec3 = remove_bad[sec2price: sec3item+1]
+sec3 = remove_bad[sec2price: sec3item]
 sec3prices = remove_bad[sec3item: ]
 
 # print(len(sec3))
@@ -92,10 +99,20 @@ for sec3idx in range(len(sec3)): #add the third sections entries
     menu_dict[sec3[sec3idx].strip()] = float(sec3prices[sec3idx].strip())
 
 
+print (menu_dict)
 
-#print(menu_dict)
+#print(len(menu_dict))
+newdict = {}
+for dish in menu_dict:
+    if menu_dict[dish] <= budget:
+        newdict[dish] = menu_dict[dish]
 
-with open('cleaned_menu_dict.json', 'w') as cleaned_menu:
-    json.dump(menu_dict, cleaned_menu)
+print ("_______________________")
+print (newdict)
+#print (len(newdict))
 
 
+# with open('cleaned_menu_dict.json', 'w') as cleaned_menu:
+#     json.dump(menu_dict, cleaned_menu)
+#
+# #

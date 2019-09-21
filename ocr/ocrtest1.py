@@ -4,7 +4,7 @@ import re
 import json
 
 # This is 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/shjan/Coding/me.nu/ocr/ocrtest1-824f812b3247.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\Users\User\Documents\me.nu\ocr\ocrtest1-824f812b3427.json"
 
 
 
