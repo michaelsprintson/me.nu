@@ -5,9 +5,9 @@ H3 EE Country Style Blood Curd Dish
 H4 4Devourable Beef Pot
 H5 T TSpicy and Crispy Chicken
 H6 EKonjac Duck Stew
-H7 魔芋滑牛肉 Konjac Beef
-H8 荷花豆腐 Lotus Tofu
-H9 ÝThree Pepper Beaten Duck
+H7  Konjac Beef
+H8  Lotus Tofu
+H9 Three Pepper Beaten Duck
 H10 Tea Smoked Duck (half)
 H11 Four Joy Lion Head
 H12 Fragrant Ribs
@@ -28,7 +28,7 @@ H12 Fragrant Ribs
 12.95
 5
 5
-游水活吴郭鱼
+
 F1L Northern Boiling Fish
 F2 Sauerkraut Fish Pot
 F3 Chengdu Style Pot Roasted Tilapia
@@ -61,16 +61,16 @@ F10 fi Scallion Pot Roasted Tilapia
 95
 Begf and Lamb
 B1 Water Boiled Beef
-B2孜然牛肉 Cumin Beef
+B2 Cumin Beef
 B3 Black Pepper Beef
 B4 Mala Beef Tofu
 B5 Mongolian Beef
-B6 干煸牛肉丝 Crispy Mala Beef
+B6  Crispy Mala Beef
 B7 Jt Baby Pepper Black Bean Beef
 B8 Baby Pepper and Shredded Beef
-B9沙茶牛肉Satay Beef
+B9Satay Beef
 B12 Sauteed Lamb with Veggies
-由 B11 孜然羊肉 Cumin Lamb
+ B11  Cumin Lamb
 13.95
 13.95
 13.95

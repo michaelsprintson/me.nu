@@ -1,5 +1,7 @@
 import io
 import os
+import re
+import json
 
 # This is 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/shjan/Coding/me.nu/ocr/ocrtest1-824f812b3247.json"
@@ -30,9 +32,6 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/shjan/Coding/me.nu/ocr/oc
 #     print(label.description)
 
 
-# # set GOOGLE_APPLICATION_CREDENTIALS=C:\Users\shjan\Downloads\ocrtest1-824f812b3247
-
-
 
 
 def detect_text(path):
@@ -52,14 +51,15 @@ def detect_text(path):
 
     response = client.text_detection(image=image)
     texts = response.text_annotations
-    print('Texts:')
+    #print('Texts:')
 
     #print(type(texts[0].description))
     new_texts = texts[0].description.split('\n')
-    print(new_texts)
+    #print(new_texts)
 
     for text in new_texts:
-        file1.writelines(text + '\n')
+        text_no_chinese = re.sub("([^\x82\x00-\x7F])+","", text)
+        file1.writelines(text_no_chinese + '\n')
 
     file1.close()
 
@@ -77,6 +77,5 @@ def detect_text(path):
 
 
 # run test with a picture
-
 #detect_text('ocr\menupictures\pic3.jpg')
 detect_text('ocr\menupictures\pic7.jpg')
