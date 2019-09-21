@@ -13,25 +13,28 @@
 					<div class="inner">
 
 						<!-- Header -->
-							<header id="header" style="padding-top: 3.5em">
-								<span class="icons">Logged in as <strong>Timothy</strong></span>
-							</header>
+						<header id="header" style="padding-top: 3.5em">
+							<div style="text-align: center;">
+								<span style="float: left;"><a href="/" style="border-bottom: none;"><img src="{{ url_for('static', filename='images/menuLogo.png') }}" alt="" style="max-height: 40px;"/></a></span>
+								<span style="float: right; padding-top: 12px;">Logged in as <strong>Timothy</strong></span>
+							</div>
+						</header>
 
 						<!-- Banner -->
-							<section id="banner" style="padding-top: 2em">
-								<div class="content">
-									<header>
-										<h1>Welcome to me.nu</h1>
-										<p>Never worry about ordering food again (reword)</p>
-									</header>
-									<ul class="actions stacked">
-										<li><a href="/chooseMenu" class="button primary fit">Yeat Now</a></li>
-									</ul>
-								</div>
-								<span class="image object">
-									<img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" />
-								</span>
-							</section>
+						<section id="banner" style="padding-top: 2em">
+							<div class="content">
+								<header>
+									<h1>Welcome to me.nu</h1>
+									<p>Never worry about ordering food again (reword)</p>
+								</header>
+								<ul class="actions stacked">
+									<li><a href="/chooseMenu" class="button primary fit">Yeat Now</a></li>
+								</ul>
+							</div>
+							<span class="image object">
+								<img src="{{ url_for('static', filename='images/menuLogo.png') }}" alt="" />
+							</span>
+						</section>
 					</div>
 				</div>
 
