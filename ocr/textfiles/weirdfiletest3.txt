@@ -1,0 +1,133 @@
+Where
+OEDK UPSTAIRS
+E ose Precials
+T1 j Crab Meat and As
+T2  Fish Fillet and Sa
+T3  West Lake Soup
+T4Winter Melon ar
+T5  Egg and Toma"
+T6 FltsHot and Sour Soup
+H1 ty Top Notch Pot of the Outlaws
+H2 ff HY Sauerkraut Fish and Lamb Pot
+H3 E Country Style Blood Curd Dish
+H4 Devourable Beef Pot
+H5 X Spicy and Crispy Chicken
+H6  Konjac Duck Stew
+H7 Konjac Beef
+H8  Lotus Tofu
+H9 RThree Pepper Beaten Duck
+H10 Tea Smoked Duck (half)
+H11 -Four Joy Lion Head
+H12 Fragrant Ribs
+31.95
+8.95
+24.95
+7.95
+14.95
+7.95
+13.95
+7.95
+12.95
+8.95
+12.95
+12.95
+8.95
+11.95
+7.95
+13.95
+Seafe
+7.95
+13.95
+10.95
+
+S1 (12) Mala Pc
+S2 (12) Chenge
+S3  (12) Simme
+S4 (12) Salt a
+S5 Water Boi
+S6 Fish Fille
+S7  Celer
+S8  Sweet l
+S9  Mala F
+S10 Shrir
+S11S
+12.95
+8.95
+12.95
+8.95
+7.95
+
+F1 Id fi Northern Boiling Fish
+F2 f Sauerkraut Fish Pot
+F3 5k Chengdu Style Pot Roasted Tilapia
+F4 k  Mala Pot Roasted Tilapia
+F5 # Bean Curd Tilapia Stew
+F7 f Pot Roasted Black Bean Tilapia
+F12  Steamed Tilapia
+F9 Sweet and Sour Crispy Tilapia
+F10 Scallion Pot Roasted Tilapia
+6.95
+6.95
+20.95
+6.95
+20.95
+6.95
+18.95
+18.95
+18.95
+18.95
+6.95
+18.95
+5.95
+18.95
+6.95
+18.95
+5.95
+4.95
+4.95
+
+C1 
+C2 
+C3 
+C4 
+C6 
+6.95
+6.95
+Beef and Lamb
+6.95
+
+B1 7 Water Boiled Beef
+13.95
+D
+B2  Cumin Beef
+B3 Black Pepper Beef
+B4 Mala Beef Tofu
+B5Mongolian Beef
+B6 F Crispy Mala Beef
+13.95
+13.95
+10.95
+13.95
+10.95
+13.95
+10.95
+13.95
+D
+B7 / Baby Pepper Black Bean Beef
+B8 Baby Pepper and Shredded Beef
+B9 Satay Beef
+B12 Sauteed Lamb with Veggies
+B11 Cumin Lamb
+11.95
+13.95
+11.95
+13.95
+11.95
+13.95
+11.95
+16,95
+11.95
+16.95
+11.95
+11.95
+

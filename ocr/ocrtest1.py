@@ -34,12 +34,12 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/shjan/Coding/me.nu/ocr/oc
 
 
 
-def detect_text(path):
+def detect_text(path, savepath):
     """Detects text in the file."""
     from google.cloud import vision
     import io
 
-    file1 = io.open("ocr\myfile.txt","w", encoding="utf-8")
+    file1 = io.open("ocr\\textfiles\\" + savepath + ".txt","w", encoding="utf-8")
 
 
     client = vision.ImageAnnotatorClient()
@@ -78,4 +78,8 @@ def detect_text(path):
 
 # run test with a picture
 #detect_text('ocr\menupictures\pic3.jpg')
-detect_text('ocr\menupictures\pic7.jpg')
+
+for i in range(1, 20):
+    pic_loc = 'ocr\menupictures\weirdpic\wpic' + str(i) + '.jpg'
+    weird_file_name = 'weirdfiletest' + str(i)
+    detect_text(pic_loc, weird_file_name)
