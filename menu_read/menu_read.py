@@ -17,7 +17,7 @@ eats_meat = bool(pref_lines[1].strip())
 user_likes = (pref_lines[2].strip().split())
 
 
-menu = io.open("ocr\myfile.txt", "r", encoding="utf-8")
+menu = io.open(r"ocr\textfiles\pic4test.txt", "r", encoding="utf-8")
 menu_lines = menu.readlines()
 #print(len(menu_lines)), 'l'
 
