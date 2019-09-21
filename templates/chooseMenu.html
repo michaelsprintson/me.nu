@@ -12,7 +12,11 @@
             <div class="inner">
                 <!-- Header -->
                     <header id="header" style="padding-top: 3.5em">
-                        <span class="icons">Logged in as <strong>Timothy</strong></span>
+                        <div style="text-align: center;">
+                            <span style="float: left;"><img src="{{ url_for('static', filename='images/malaLogo.jpeg') }}" alt="" style="max-height: 100px;"/></span>
+                            <span style="float: right;">Logged in as <strong>Timothy</strong></span>
+                        </div>
+
                     </header>
                 <section>
                     <header class="major">
@@ -20,24 +24,17 @@
                     </header>
                     <div class="posts">
                         <article>
-                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>
+                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/malaLogo.jpeg') }}" alt="" /></a>
                             <h3>Mala Sichuan Bistro</h3>
                             <ul class="actions">
                                 <li><a href="/takePic" class="button">Select</a></li>
                             </ul>
                         </article>
                         <article>
-                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>
-                            <h3>East West Tea</h3>
+                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/shareteaLogo.png') }}" alt="" /></a>
+                            <h3>Sharetea</h3>
                             <ul class="actions">
-                                <li><a href="#" class="button">Select</a></li>
-                            </ul>
-                        </article>
-                        <article>
-                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>
-                            <h3>JINYA Ramen</h3>
-                            <ul class="actions">
-                                <li><a href="#" class="button">Select</a></li>
+                                <li><a href="/takePic" class="button">Select</a></li>
                             </ul>
                         </article>
                     </div>
