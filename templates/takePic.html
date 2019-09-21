@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block head %}
-
+<script src="{{ url_for('static', filename='js/camera.js') }}"></script>
+<script src="{{ url_for('static', filename='js/webcam.js') }}"></script>
 {% endblock %}
 
 {% block body %}
 <div id="my_camera" style="width:320px; height:240px;"></div>
 <div id="my_result"></div>
 
-<a href="javascript:void(take_snapshot())">Load camera</a>
 <a href="javascript:void(take_snapshot())">Take Snapshot</a>
 {% endblock %}

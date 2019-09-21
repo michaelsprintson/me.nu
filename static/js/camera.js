@@ -1,4 +1,4 @@
-function ShowCam() {
+function show_cam() {
     Webcam.set({
         width: 320,
         height: 240,
@@ -8,7 +8,7 @@ function ShowCam() {
     Webcam.attach('#my_camera');
 }
 
-window.onload= ShowCam;
+window.onload = show_cam;
 
 function take_snapshot() {
     Webcam.snap( function(data_uri) {
@@ -19,5 +19,6 @@ function take_snapshot() {
 			// 'code' will be the HTTP response code from the server, e.g. 200
 			// 'text' will be the raw response content
 		} );
+        window.location.href = '/';
     } );
 }
