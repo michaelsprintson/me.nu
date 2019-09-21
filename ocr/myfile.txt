@@ -1,24 +1,95 @@
-Pork
-P1 ffi Shredded Pork in Spicy Garlic Sauce
-P2 Shredded Pork with Bamboo Shoots
-P3T Shredded Pork with Spiced Dry Tofu
-P4 Sautéed Shredded Pork in Beijing Bean Sauce
-P5 E Sautéed Pork Bacon and Veggies
-P6 E Twice Cooked Pork
-P7 Stir Fried Pork Kidneys
-P8 iEEProsper at 5AM
-P9 T Crispy and Spicy Pork Intestines
-P10 九层塔大肠 Basil Intestines
-P11 Ants on the Tree
-10.95
-10.95
-10.95
+A ouse Seecials
+H1 Top Notch Pot of the Outlaws
+H2 Sauerkraut Fish and Lamb Pot
+H3 EE Country Style Blood Curd Dish
+H4 4Devourable Beef Pot
+H5 T TSpicy and Crispy Chicken
+H6 EKonjac Duck Stew
+H7 魔芋滑牛肉 Konjac Beef
+H8 荷花豆腐 Lotus Tofu
+H9 ÝThree Pepper Beaten Duck
+H10 Tea Smoked Duck (half)
+H11 Four Joy Lion Head
+H12 Fragrant Ribs
+31.95
+24.95
+14.95
+13.95
+12.95
+12.95
+12.95
 11.95
-11.95
-11.95
-11.95
-11.95
-11.95
-11.95
-10.95
+5
+13.95
+13.95
+5
+5
+12.95
+12.95
+5
+5
+游水活吴郭鱼
+F1L Northern Boiling Fish
+F2 Sauerkraut Fish Pot
+F3 Chengdu Style Pot Roasted Tilapia
+F4 Rf Mala Pot Roasted Tilapia
+F5 Bean Curd Tilapia Stew
+F7 Pot Roasted Black Bean Tilapia
+F12 Steamed Tilapia
+F9 fi Sweet and Sour Crispy Tilapia
+F10 fi Scallion Pot Roasted Tilapia
+5
+5
+20.95
+5
+20.95
+18.95
+18.95
+18.95
+5
+18.95
+95
+95
+18.95
+18.95
+95
+18.95
+95
+95
+95
+95
+95
+Begf and Lamb
+B1 Water Boiled Beef
+B2孜然牛肉 Cumin Beef
+B3 Black Pepper Beef
+B4 Mala Beef Tofu
+B5 Mongolian Beef
+B6 干煸牛肉丝 Crispy Mala Beef
+B7 Jt Baby Pepper Black Bean Beef
+B8 Baby Pepper and Shredded Beef
+B9沙茶牛肉Satay Beef
+B12 Sauteed Lamb with Veggies
+由 B11 孜然羊肉 Cumin Lamb
+13.95
+13.95
+13.95
+95
+13.95
+95
+13.95
+95
+13.95
+95
+13.95
+95
+13.95
+95
+13.95
+95
+16.95
+16.95
+95
+95
+95
 
