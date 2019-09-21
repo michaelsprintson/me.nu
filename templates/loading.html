@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script src="{{ url_for('static', filename='js/loading.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div id="wrapper">
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <!-- Header -->
+                <header id="header" style="padding-top: 3.5em">
+                    <span class="icons">Logged in as <strong>Timothy</strong></span>
+                </header>
+            <section>
+                <p>loading...please wait (have a fancy spinner here)</p>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}

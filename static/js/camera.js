@@ -19,6 +19,6 @@ function take_snapshot() {
 			// 'code' will be the HTTP response code from the server, e.g. 200
 			// 'text' will be the raw response content
 		} );
-        window.location.href = '/';
+        window.location.href = '/loading';
     } );
 }

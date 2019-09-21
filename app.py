@@ -62,6 +62,16 @@ def upload_file():
     # '''
 
 
+@app.route('/loading')
+def loading():
+    return render_template('loading.html')
+
+
+@app.route('/suggestedMenu')
+def suggested_menu():
+    return render_template('suggestedMenu.html')
+
+
 @app.route('/foo')
 def foo():
     test = 'asdfasdf'
