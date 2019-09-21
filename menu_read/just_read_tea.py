@@ -105,7 +105,7 @@ def filter(menu_dict, user_pref):
     newdict = {}
     for dish in menu_dict:
         item = menu_dict[dish]
-        if menu_dict[dish] <= budget:
+        if menu_dict[dish] <= budget*1.05:
             if not eats_meat:
                 for meat in meats:
                     if meat in dish:
