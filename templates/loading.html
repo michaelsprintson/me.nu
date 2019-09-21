@@ -14,7 +14,12 @@
                     <span class="icons">Logged in as <strong>Timothy</strong></span>
                 </header>
             <section>
-                <p>loading...please wait (have a fancy spinner here)</p>
+                <video width="320" height="240" autoplay loop muted>
+                  <source src="{{ url_for('static', filename='images/loadingHamster.mp4') }}" type="video/mp4" />
+<!--                  <source src="movie.ogg" type="video/ogg" />-->
+                  Your browser does not support the video tag.
+                </video>
+                <p>Loading...</p>
             </section>
         </div>
     </div>
