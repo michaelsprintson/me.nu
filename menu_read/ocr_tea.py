@@ -44,7 +44,7 @@ def detect_text(path, savepath):
         #     first_word = first_word[:-1]
         
         if first_word:
-            if first_word[0] == "(":
+            if first_word[0] in {"(", "0", "."}:
                 continue
 
         file1.writelines(first_word + ' ' + ' '.join(
@@ -58,6 +58,6 @@ def detect_text(path, savepath):
 # create dictionary
 d = load_words()
 
-pic_loc = 'ocr\\menupictures\\othermenu\\teamenu.jpg'
-test_file_name = 'teamenu'
+pic_loc = 'ocr\\menupictures\\othermenu\\shareteatest2.jpg'
+test_file_name = 'shareteamenu2'
 detect_text(pic_loc, test_file_name)
