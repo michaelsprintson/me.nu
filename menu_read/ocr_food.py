@@ -40,8 +40,8 @@ def detect_text(path, savepath):
         text_lst = re.sub("([^\x82\x00-\x7F])+", " ", text).split()
 
         first_word = text_lst[0] if text_lst else ''
-        # if first_word and not first_word[-1].isdigit():
-        #     first_word = first_word[:-1]
+        if first_word and not first_word[-1].isdigit():
+            first_word = first_word[:-1]
 
         file1.writelines(first_word + ' ' + ' '.join(
             [word for word in text_lst[1:] if (len(word) > 2 and word.lower() in d)]) + '\n')
