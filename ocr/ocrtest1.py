@@ -99,7 +99,7 @@ def detect_text(path, savepath):
 
 
 # run test with normal pictures
-detect_text('ocr\menupictures\pic5.jpg', 'pic5test')
+detect_text('ocr\menupictures\pic4.jpg', 'pic4test')
 
 
 
