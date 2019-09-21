@@ -76,7 +76,7 @@ def first_clean(ocr_menu):
     # get rid of the random numbers from OCR and the menu headings
     for lineidx in range(len(menu_lines)):
         item = menu_lines[lineidx].strip()
-        if (len(item) >= 4) and (item[3].isdigit() or ((not item[0].isdigit() and item[1].isdigit()))):
+        if (len(item) <= 10):
             remove_bad.append(menu_lines[lineidx])
     #print(remove_bad)
     return remove_bad
