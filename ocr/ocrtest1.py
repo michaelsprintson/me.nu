@@ -1,7 +1,10 @@
 import io
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/shjan/Downloads/ocrtest1-824f812b3247.json"
+# This is 
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/shjan/Coding/me.nu/ocr/ocrtest1-824f812b3247.json"
+
+
 
 # # Imports the Google Cloud client library
 # from google.cloud import vision
@@ -74,4 +77,6 @@ def detect_text(path):
 
 
 # run test with a picture
-detect_text('ocr\menupictures\pic3.jpg')
+
+#detect_text('ocr\menupictures\pic3.jpg')
+detect_text('ocr\menupictures\pic7.jpg')
