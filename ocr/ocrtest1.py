@@ -7,7 +7,7 @@ import io
 
 # This is 
 # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\User\Documents\me.nu\ocr\ocrtest1-824f812b3247.json"
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\shjan\Coding\me.nu\ocr\ocrtest1-824f812b3247.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\shjan\Downloads\ocrtest1-824f812b3247.json"
 
 
 # # Imports the Google Cloud client library
