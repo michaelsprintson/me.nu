@@ -130,12 +130,11 @@ def final_dump(menu, pref, dump, dumpsavename):
     menudict = make_fooddict(foods, prices)
     menudict = filter(menudict, pref)
     if dump:
-        with open("menu_read\\menuJSON\\" + dumpsavename + '.json', 'w') as cleaned_menu:
+        with open("menuJSON/" + dumpsavename + '.json', 'w') as cleaned_menu:
             json.dump(menudict, cleaned_menu)
     return menudict
 
 
-print(final_dump("ocr\\menu_tests\\othermenutest7.txt", "menu_read\\pref_sample.txt", True, "othermenutest7"))
 
 
 
