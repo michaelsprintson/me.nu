@@ -201,7 +201,7 @@ user_likes = (pref_lines[2].strip().split())
 #menu = io.open("ocr\myfile.txt", "r", encoding="utf-8")
 #menu = io.open("ocr\menu_tests\soups.txt", "r", encoding="utf-8")
 #menu = io.open("ocr\menu_tests\weirdapps.txt", "r", encoding="utf-8")
-menu = io.open("ocr\menu_tests\pic5test.txt", "r", encoding="utf-8")
+menu = io.open("ocr\menu_tests\pic4test.txt", "r", encoding="utf-8")
 #menu = io.open("ocr\menu_tests\pic7test.txt", "r", encoding="utf-8")
 
 

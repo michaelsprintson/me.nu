@@ -1,0 +1,156 @@
+F 
+Appetigeral Dish
+ 
+A1 Couples Lung Slices
+A2 Garlic Bacon
+A3 Red Oil Rabbit
+A4 Funky Stick Chicken
+A5 Green Onion Oil Shrimp
+H1 Notch Pot the Outlaws
+H2 Sauerkraut Fish and Lamb Pot
+H3 Country Style Blood Curd Dish
+H4 Devourable Beef Pot
+H5 Spicy and Crispy Chicken
+H6 Konjac Duck Stew
+H7 Konjac Beef
+H8 Lotus Tofu
+H9 Three Pepper Beaten Duck
+H10 Tea Smoked Duck
+H11 Four Joy Lion Head
+H12 Fragrant Ribs
+31.95 
+8.95 
+24.95 
+7.95 
+14.95 
+7.95 
+13.95 
+7.95 
+12.95 
+8.95 
+12.95 
+12.95 
+ Mala Beef Jerky
+Mal Beef Tendon
+Hous Special Sculpted Kidney
+Mouth-Waterin Chicken
+Spic Beef Tripes
+Peppercor Arctic Surf Clams
+8.95 
+A7 
+11.95 
+7.95 
+A8 
+13.95 
+7.95 
+A9 
+13.95 
+10.95 
+A10 
+12.95 
+8.95 
+A11 
+12.95 
+8.95 
+A12 
+Golde Needle Thousand Leave
+7.95 
+A13 
+Chillin Cucumber Sticks
+6.95 
+A14 
+ 
+F1 Northern Boiling Fish
+F2 Sauerkraut Fish Pot
+F3 Chengdu Style Pot Roasted Tilapia
+F4 Mala Pot Roasted Tilapia
+F5 Bean Curd Tilapia Stew
+F7 Pot Roasted Black Bean Tilapia
+F12 Steamed Tilapia
+F9 Sweet and Sour Crispy Tilapia
+F10 Scallion Pot Roasted Tilapia
+6.95 
+Chille Tofu Skin
+A15 
+20.95 
+A16 Sesame Bamboo Shoots
+A17 Mala Bamboo Shoots
+6.95 
+20.95 
+6.95 
+18.95 
+18.95 
+Loca 
+18.95 
+ 
+X1 House Special Cold Noodle
+X2 Sour and Spicy Intestine Noodle
+X3 Dan Dan Noodle
+X4 Chengdu Mung Bean Jelly
+X5 Sweet Soft Tofu
+X6 and Sour Soft Tofu
+X7 Red Oil Dumplings
+X8 Red Oil Wontons
+X9 Original Wontons
+18.95 
+6.95 
+18.95 
+5.95 
+18.95 
+6.95 
+18.95 
+5.95 
+4.95 
+4.95 
+6.95 
+6.95 
+an Lamb
+Bee 
+6.95 
+ 
+B1 Water Boiled Beef
+B2 Cumin Beef
+B3 Black Pepper Beef
+B4 Mala Beef Tofu
+B5 Mongolian Beef
+B6 Crispy Mala Beef
+B7 Baby Pepper Black Bean Beef
+B8 Baby Pepper and Shredded Beef
+B9 Satay Beef
+B12 Sauteed Lamb with Veggies
+B11 Cumin Lamb
+13.95 
+13.95 
+Por 
+13.95 
+10.95 
+P1 Shredded Pork Spicy Garlic Sauce
+P2 Shredded Pork with Bamboo Shoots
+P3 Shredded Pork with Spiced Dry Tofu
+P4 Saut Shredded Pork Bean Sauce
+P5 Saut Pork Bacon and Veggies
+P6 Twice Cooked Pork
+P7 Stir Fried Pork Kidneys
+P8 
+P9 Crispy and Spicy Pork Intestines
+P10 Basil Intestines
+P11 the Tree
+13.95 
+10.95 
+13.95 
+10.95 
+13.95 
+11.95 
+13.95 
+11.95 
+13.95 
+11.95 
+13.95 
+11.95 
+16.95 
+11.95 
+16.95 
+11.95 
+11.95 
+10.95 
+ 
