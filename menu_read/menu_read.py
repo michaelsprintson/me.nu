@@ -27,7 +27,6 @@ menu = io.open("ocr\menu_tests\pic5test.txt", "r", encoding="utf-8")
 
 
 menu_lines = menu.readlines()
-print( menu_lines, '_____________________________')
 # print(len(menu_lines)), 'l'
 
 remove_bad = [] # empty list to hold raw lines of the cleaned up full menu
@@ -41,13 +40,17 @@ for lineidx in range(len(menu_lines)):
         #print(item, 'added')
         remove_bad.append(menu_lines[lineidx])
 
-# print(len(remove_bad), 'the number of lines in menu ')
-# print (remove_bad)
-
+print((remove_bad), 'num lines in removed')
 # getting the end index for each section of the menu
 # each section is a section of the dishes, or the prices of the dishes
 
 def findidx(usemenu, findprice):
+    """
+    :param usemenu: menu result from OCR
+    :param findprice: True if we are finding the price section idx, otherwise for food section idx
+    :return:
+    """
+
     for lineidx in range(len(usemenu)):
         if findprice:
             if (usemenu[lineidx][0]).isdigit():  # if its a price
@@ -62,97 +65,53 @@ def findidx(usemenu, findprice):
     return sectionidx
 
 
-sec1item = findidx(remove_bad, True)
-sec1price = findidx(remove_bad[sec1item :], False) + sec1item
+def recallfind(usemenu):
+    """
+    :param usemenu: menu result of OCR
+    :return: a list of the indexes in the menu lines where it changes from dishes to itesm
+    """
+    current = 0
+    outto = [0]
+    pricefind = True
+    while current < len(usemenu)-1:
+        sectionplace = findidx(remove_bad[current:], pricefind)
+        current += sectionplace
+        outto.append(current)
+        print (remove_bad[current], current, 'the current')
+        pricefind = not pricefind
+    return outto
 
-sec2item = findidx(remove_bad[sec1price :], True) + sec1price
-sec2price = findidx(remove_bad[sec2item :], False) + sec2item
-
-sec3item = findidx(remove_bad[sec2price :], True) + sec2price
-sec3price = findidx(remove_bad[sec3item :], False) + sec3item
+section_idx_list = recallfind(remove_bad)
+# print (section_idx_list)
 
 
-# for lineidx in range(len(remove_bad)):
-#     if (remove_bad[lineidx][0]).isdigit():  # if its a price
-#         sec1item = lineidx
-#         print (sec1item, 'sec1item')
-#         break
+sections = [] #list of lists, sublists are menu item sections, following list is corresponding price section
+for i in range(len(section_idx_list)-1):
+    subsection = remove_bad[section_idx_list[i] : section_idx_list[i+1]+1] #holds one section of prices or items
+
+    #print (len(subsection), subsection)
+    sections.append(subsection)
+
+# print ("_________SECTIONS________")
+# print (len(sections))
 #
-# for lineidx in range(sec1item, len(remove_bad)):
-#     if not (remove_bad[lineidx][0]).isdigit():
-#         sec1price = lineidx
-#         print (sec1price, 'sec1price')
-#         break
-#
-# for lineidx in range(sec1price, len(remove_bad)):
-#     if (remove_bad[lineidx][0]).isdigit():
-#         sec2item = lineidx
-#         print (sec2item, 'sec2item')
-#         break
-#
-# for lineidx in range(sec2item, len(remove_bad)):
-#     if not (remove_bad[lineidx][0]).isdigit():
-#         sec2price = lineidx
-#         print (sec2price, 'sec2price')
-#         break
-#
-# for lineidx in range(sec2price, len(remove_bad)):
-#     if (remove_bad[lineidx][0]).isdigit():
-#         sec3item = lineidx
-#         print(sec3item, 'sec3i')
-#         break
-#
-# for lineidx in range(sec3item, len(remove_bad)):
-#     if not (remove_bad[lineidx][0]).isdigit():
-#         sec3price = lineidx
-#         print (sec3price, 'sec3')
-#         break
 
-sec1 = remove_bad[0: sec1item]
-print (sec1,'sec1')
-print ("_______________")
-sec1prices = remove_bad[sec1item: sec1price]
-print (sec1prices, '1prices')
-
-sec2 = remove_bad[sec1price: sec2item]
-print (sec2,'sec2')
-sec2prices = remove_bad[sec2item: sec2price]
-print ("_______________")
-
-
-sec3 = remove_bad[sec2price: sec3item]
-print (sec3,'sec3')
-print ("_______________")
-
-sec3prices = remove_bad[sec3item: ]
-
-# print(len(sec3))
-# print(sec3)
-#
-# print('------------------')
-# print(len(sec3prices))
-# print(sec3prices)
 
 menu_dict = defaultdict()
-
-for sec1idx in range(len(sec1)): # add the first sections entries
-    menu_dict[sec1[sec1idx].strip()] = float(sec1prices[sec1idx].strip())
-
-for sec2idx in range(len(sec2)): # add the second sections entries
-    menu_dict[sec2[sec2idx].strip()] = float(sec2prices[sec2idx].strip())
-
-for sec3idx in range(len(sec3)): # add the third sections entries
-    menu_dict[sec3[sec3idx].strip()] = float(sec3prices[sec3idx].strip())
-
-print (len(menu_dict))
-print (menu_dict)
+for sectionidx in range(0,len(sections),2): #grab each section of items
+    for itemidx in range(len(sections[sectionidx])): #grab each menu item
+        #print (sections[sectionidx][itemidx], sections[sectionidx+1][itemidx])
+        if itemidx == len(sections[sectionidx])-1:
+            break
+        #print (sections[sectionidx][itemidx], 'itemidx problem',itemidx, sections[sectionidx+1][itemidx])
+        menu_dict[sections[sectionidx][itemidx].strip()] = float(sections[sectionidx+1][itemidx].strip())
 
 
 # print(len(menu_dict))
+
+
+# filters out dishes based on vegetarian status and budget
 meats = {"Beef", "Pork", "Duck", "Chicken", "Lamb", "Blood", "Lung", "Meat", "Fish", "Clam", "Tripe", "Prawn", "Rib", "Tilapia"}
-
-
-# filters out dishes for vegetarians or if over budget
 newdict = {}
 for dish in menu_dict:
     item = menu_dict[dish]
@@ -173,8 +132,8 @@ for dish in menu_dict:
 # print (newdict)
 # print (len(newdict))
 
-#
-# with open('cleaned_menu_dict.json', 'w') as cleaned_menu:
-#     json.dump(newdict, cleaned_menu)
-#
+
+with open('first_page_cleaned_menu_dict.json', 'w') as cleaned_menu:
+    json.dump(newdict, cleaned_menu)
+
 # #
