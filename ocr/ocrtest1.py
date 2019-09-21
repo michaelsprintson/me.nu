@@ -39,7 +39,7 @@ def detect_text(path, savepath):
     from google.cloud import vision
     import io
 
-    file1 = io.open("ocr\\textfiles\\" + savepath + ".txt","w", encoding="utf-8")
+    file1 = io.open("ocr\\menu_tests\\" + savepath + ".txt","w", encoding="utf-8")
 
 
     client = vision.ImageAnnotatorClient()
