@@ -76,8 +76,12 @@ def first_clean(ocr_menu):
     # get rid of the random numbers from OCR and the menu headings
     for lineidx in range(len(menu_lines)):
         item = menu_lines[lineidx].strip()
-        if (len(item) > 10) or is_number(item) and not("." in item and item[-1].isdigit()):
-            remove_bad.append(menu_lines[lineidx])
+        if (len(item) > 10) or is_number(item):
+            if item.__contains__(".") and not item[-1].isdigit():
+                place = item.index(".")
+                remove_bad.append(menu_lines[lineidx][place+1:])
+            else:
+                remove_bad.append(menu_lines[lineidx])
     #print(remove_bad)
     return remove_bad
 
@@ -86,6 +90,7 @@ def make_fooddict(foods, prices):
     menu_dict = defaultdict()
     print (len(foods), len(prices))
     for foodidx in range(len(foods)):
+        print (foods[foodidx])
         print(foods[foodidx], prices[foodidx])
         menu_dict[foods[foodidx]] = prices[foodidx]
     return menu_dict
@@ -136,7 +141,7 @@ def final_dump(menu, pref, dump, dumpsavename):
 
 
 
-os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
+#os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
 
 print(final_dump("ocr/menu_tests/shareteanocolor.txt", "pref_sample.txt", True, "shareteanocolor"))
 
