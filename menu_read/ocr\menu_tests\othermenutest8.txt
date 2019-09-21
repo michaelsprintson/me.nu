@@ -1,4 +1,5 @@
-Te 
+ 
+ 
 50 
 Ad Tapioca
 T1 Jasmine Green Tea
@@ -26,7 +27,7 @@ T22 Kumquat Tea
 123 Ginger Tea
 T24 Longan Tea
 T25 Kumquat Tea
-T26 Hot Cocoa
+T26 Hot
 2.85 
 2.85 
 2.85 
@@ -34,9 +35,9 @@ T4
 2.85 
 3.25 
 3.25 
+.3.25 
 3.25 
-3.25 
-3.25 
+.3.25 
 3.25 
 3.25 
 3.25 

@@ -6,26 +6,24 @@ import re
 from google.cloud import vision
 
 # set environment variable for google api credential
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\shjan\Downloads\ocrtest1-bf8fefb197a6.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "apikey.json"
 
 
 """
 This file reads menu OCR results from myfile.txt and dumps json dictionary of menu item to price
 """
 
-
-
-
-def load_words():
-    with open(r"ocr\words_alpha.txt") as word_file:
+def load_words(filename):
+    with open(filename) as word_file:
         valid_words = set(word_file.read().split())
     return valid_words
 
 
 def detect_text(path, savepath):
     """Detects text in the file."""
+    d = load_words('ocr/wa.txt')
 
-    file1 = io.open("ocr\\menu_tests\\" + savepath +
+    file1 = io.open("ocr/menu_tests/" + savepath +
                     ".txt", "w", encoding="utf-8")
     client = vision.ImageAnnotatorClient()
 
@@ -48,12 +46,3 @@ def detect_text(path, savepath):
 
     file1.close()
 
-
-
-
-# create dictionary
-d = load_words()
-
-pic_loc = 'ocr\\menupictures\\othermenu\\othermenu8.jpg'
-test_file_name = 'othermenutest8'
-detect_text(pic_loc, test_file_name)
