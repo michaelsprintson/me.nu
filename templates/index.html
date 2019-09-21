@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block body %}
-<form action = "/foo" method = "post" enctype="multipart/form-data">
-    <input type="file" name="file" />
-    <input type = "submit" value="Upload">
-</form>
+<div id="my_camera" style="width:320px; height:240px;"></div>
+<div id="my_result"></div>
+
+<a href="javascript:void(take_snapshot())">Take Snapshot</a>
 {% endblock %}
