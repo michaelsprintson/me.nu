@@ -1,0 +1,57 @@
+Te 
+50 
+Ad Tapioca
+T1 Jasmine Green Tea
+T2 Bubble Black
+T3 Tea
+*Mil 
+T5 Boba Milk
+T6 Taro Milk
+T7 Almond Milk
+T8 Coconut Milk
+T9 Coffee Milk Tea
+T10 Honeydew Milk
+T11 Cantaloupe Milk
+T12 Milk Tea
+T13 Mango Milk
+T14 Durian Milk
+T15 Tapioca Green
+T16 Tapioca Black
+T17 Citron Green
+T18 Lychee
+T19 Passion Fruit Green Tea
+T20 Honey Peach
+T21 Lemon
+T22 Kumquat Tea
+123 Ginger Tea
+T24 Longan Tea
+T25 Kumquat Tea
+T26 Hot Cocoa
+2.85 
+2.85 
+2.85 
+T4 
+2.85 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+ 

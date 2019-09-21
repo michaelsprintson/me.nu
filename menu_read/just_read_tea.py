@@ -78,13 +78,15 @@ def first_clean(ocr_menu):
         item = menu_lines[lineidx].strip()
         if (len(item) >= 4) and (item[3].isdigit() or ((not item[0].isdigit() and item[1].isdigit()))):
             remove_bad.append(menu_lines[lineidx])
-    print(remove_bad)
+    #print(remove_bad)
     return remove_bad
 
 
 def make_fooddict(foods, prices):
     menu_dict = defaultdict()
-    for foodidx in range(len((foods))):
+    print (len(foods), len(prices))
+    for foodidx in range(len(foods)):
+        print(foods[foodidx], prices[foodidx])
         menu_dict[foods[foodidx]] = prices[foodidx]
     return menu_dict
 
@@ -133,7 +135,7 @@ def final_dump(menu, pref, dump, dumpsavename):
     return menudict
 
 
-print(final_dump("ocr\\menu_tests\\pic5test.txt", "menu_read\\pref_sample.txt", False, "asdf"))
+print(final_dump("ocr\\menu_tests\\othermenutest3.txt", "menu_read\\pref_sample.txt", True, "othermenutest3"))
 
 
 

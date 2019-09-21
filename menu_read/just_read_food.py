@@ -3,51 +3,6 @@ import io
 from collections import defaultdict
 import json
 import re
-from google.cloud import vision
-
-# set environment variable for google api credential
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\shjan\Downloads\ocrtest1-bf8fefb197a6.json"
-
-
-"""
-This file reads menu OCR results from myfile.txt and dumps json dictionary of menu item to price
-"""
-
-
-
-
-def load_words():
-    with open(r"ocr\words_alpha.txt") as word_file:
-        valid_words = set(word_file.read().split())
-    return valid_words
-
-
-def detect_text(path, savepath):
-    """Detects text in the file."""
-
-    file1 = io.open("ocr\\menu_tests\\" + savepath +
-                    ".txt", "w", encoding="utf-8")
-    client = vision.ImageAnnotatorClient()
-
-    with io.open(path, 'rb') as image_file:
-        content = image_file.read()
-
-    image = vision.types.Image(content=content)
-    response = client.text_detection(image=image)
-    texts = response.text_annotations
-
-    for text in texts[0].description.split('\n'):
-        text_lst = re.sub("([^\x82\x00-\x7F])+", " ", text).split()
-
-        first_word = text_lst[0] if text_lst else ''
-        if first_word and not first_word[-1].isdigit():
-            first_word = first_word[:-1]
-
-        file1.writelines(first_word + ' ' + ' '.join(
-            [word for word in text_lst[1:] if (len(word) > 2 and word.lower() in d)]) + '\n')
-
-    file1.close()
-
 
 
 def is_number(s):
@@ -123,13 +78,15 @@ def first_clean(ocr_menu):
         item = menu_lines[lineidx].strip()
         if (len(item) >= 4) and (item[3].isdigit() or ((not item[0].isdigit() and item[1].isdigit()))):
             remove_bad.append(menu_lines[lineidx])
-
+    #print(remove_bad)
     return remove_bad
 
 
 def make_fooddict(foods, prices):
     menu_dict = defaultdict()
-    for foodidx in range(len((foods))):
+    print (len(foods), len(prices))
+    for foodidx in range(len(foods)):
+        print(foods[foodidx], prices[foodidx])
         menu_dict[foods[foodidx]] = prices[foodidx]
     return menu_dict
 
@@ -178,25 +135,23 @@ def final_dump(menu, pref, dump, dumpsavename):
     return menudict
 
 
+print(final_dump("ocr\\menu_tests\\othermenutest7.txt", "menu_read\\pref_sample.txt", True, "othermenutest7"))
 
 
 
 # create dictionary
-d = load_words()
-
-pref_location = "menu_read\\pref_sample.txt"
+#d = load_words()
 
 # run test with normal pictures
-pic_loc = 'ocr\\menupictures\\othermenu\\othermenu7.jpg'
-test_file_name = 'othermenutest7'
-detect_text(pic_loc, test_file_name)
-print(final_dump('ocr\\menu_tests\\' + test_file_name + '.txt', pref_location, True, test_file_name))
+
+# detect_text('ocr\menupictures\pic6.jpg', 'pic6test')
+
 
 # run test with weird pictures
 
 # for i in range(2, 5):
 #     pic_loc = 'ocr\menupictures\weirdpic\wpic' + str(i) + '.jpg'
-#     file_name = 'weirdfiletest' + str(i)
-#     detect_text(pic_loc, file_name)
+#     weird_file_name = 'weirdfiletest' + str(i)
+#     detect_text(pic_loc, weird_file_name)
 #     print(final_dump("ocr\menu_tests\weirdfiletest" + str(i) + ".txt",
-#                      pref_location, True, "weirdpic" + str(i)))
+#                      "menu_read\pref_sample.txt", True, "weirdpic" + str(i)))
