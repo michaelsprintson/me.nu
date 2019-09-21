@@ -3,10 +3,10 @@ import io
 from collections import defaultdict
 import json
 import re
-from google.cloud import vision
+#from google.cloud import vision
 
 # set environment variable for google api credential
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\shjan\Downloads\ocrtest1-bf8fefb197a6.json"
+#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\shjan\Downloads\ocrtest1-bf8fefb197a6.json"
 
 
 """
@@ -180,17 +180,17 @@ def final_dump(menu, pref, dump, dumpsavename):
 
 
 
-
+print (final_dump(r"ocr\menu_tests\weirdfiletest18.txt", "menu_read\pref_sample.txt", False, "as"))
 # create dictionary
 d = load_words()
 
 pref_location = "menu_read\\pref_sample.txt"
 
-# run test with normal pictures
-pic_loc = 'ocr\\menupictures\\othermenu\\othermenu7.jpg'
-test_file_name = 'othermenutest7'
-detect_text(pic_loc, test_file_name)
-print(final_dump('ocr\\menu_tests\\' + test_file_name + '.txt', pref_location, True, test_file_name))
+# # run test with normal pictures
+# pic_loc = 'ocr\\menupictures\\othermenu\\othermenu7.jpg'
+# test_file_name = 'othermenutest7'
+# detect_text(pic_loc, test_file_name)
+# print(final_dump('ocr\\menu_tests\\' + test_file_name + '.txt', pref_location, True, test_file_name))
 
 # run test with weird pictures
 

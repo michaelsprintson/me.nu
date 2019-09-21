@@ -1,87 +1,58 @@
  
  
-Boile Peanuts
-Appetizer 
-1.50 
-1.50 
-Spic Pork Tripe
-1.50 
- Pickled
-1.50 
-Spic Bamboo Shreds
-Thousan Year Old Eggs with Jalapeno
-Por Liver
-Roaste Pork Ears
-1.50 
-1.95 
-1.95 
-1.95 
-L Mein Noodle
-LI 
-Da Dan Noodle
-5.50 
-Spic Pork Mein with Sesame Sauce
-Z 
-L2 
-5.50 
-Por Mein with Shredded Cucumber
-Spic Noodle
-Spic Pork Mein with Garlic Sauce
-Col Noodle with Sesame
-Spic Cold
-L3 
-5.50 
-L4 
-5.50 
-L5 
-5.50 
-Vegetaria Noodle
-&Noodl Soup
-Mushroo Noodle
-Tomat and Egg Noodle Soup
-Ho and Sour Angel
-Spic Vegetable
-Mixe Vegetables with Noodle
- 
-VI 
-5,95 
-V2 
-5.50 
-V3 
-4.95 
-V4 
-5.50 
-V5 
-Indicate Hot Spicy
- 
-Cumi Lamb Skewer
-6.95 
- 
-Noodl Soup
- 
-Lam and Beef Noodle Soups Have The Choice
-o Skinny Flat Noodles
-Lam Noodle
-NS2 Beef Noodle Soup
-NS3 Beef Noodle Soup
-NS4 Spicy Beef Noodle
-NS5 Tomato Beef Noodle Soup
-NS6 Spicy Tomato Beef Noodle
-NS7 Beef Tendon Noodle Soup
-NS8 Spicy Beef Tendon Noodle
-NS9 Pork Ribs Noodle Soup
-NS10 Ground Pork with Snow Cabbage Noodle
-Por Hock Noodle
-NS1 
-7.95 
-6.50 
-.6.50 
-6.50 
-6.95 
-6.95 
-7.45 
-.7.45 
-5.95 
-NS11 
-6.50 
+50 
+Ad Tapioca
+T1 Jasmine Green Tea
+T2 Bubble Black
+T3 Tea
+*Mil 
+T5 Boba Milk
+T6 Taro Milk
+T7 Almond Milk
+T8 Coconut Milk
+T9 Coffee Milk Tea
+T10 Honeydew Milk
+T11 Cantaloupe Milk
+T12 Milk Tea
+T13 Mango Milk
+T14 Durian Milk
+T15 Tapioca Green
+T16 Tapioca Black
+T17 Citron Green
+T18 Lychee
+T19 Passion Fruit Green Tea
+T20 Honey Peach
+T21 Lemon
+T22 Kumquat Tea
+123 Ginger Tea
+T24 Longan Tea
+T25 Kumquat Tea
+T26 Hot
+2.85 
+2.85 
+2.85 
+T4 
+2.85 
+3.25 
+3.25 
+.3.25 
+3.25 
+.3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
+3.25 
  
