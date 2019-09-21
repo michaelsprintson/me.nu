@@ -24,6 +24,11 @@ def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
+@app.route('/chooseMenu')
+def choose_menu():
+    return render_template('chooseMenu.html')
+
+
 @app.route('/saveImage', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
