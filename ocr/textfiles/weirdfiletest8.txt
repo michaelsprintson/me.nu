@@ -1,0 +1,88 @@
+Afpeerold Dish
+A1 Couples Lung Slices
+A2 Garlic Bacon
+8.95
+7.95
+A3 Red Oil Rabbit
+A4 24Funky Stick Chicken
+A5 Green Onion Oil Shrimp
+7.95
+7.95
+8.95
+TMala Beef Jerky
+Mala Beef Tendon
+EHouse Special Sculpted Kidney
+Mouth-Watering Chicken
+Spicy Beef Tripes
+I Peppercorn Arctic Surf Clams
+Golden Needle Thousand Leave
+Chillin' Cucumber Sticks
+Chilled Tofu Skin
+Sesame Bamboo Shoots
+Mala Bamboo Shoots
+A7
+8.95
+A8
+7.95
+A9
+7.95
+A10
+10.95
+A11
+8.95
+A12
+8.95
+A13
+7.95
+A14
+6.95
+A15
+6.95
+A16
+6.95
+A17
+6.95
+Local Pracks
+
+X1 House Special Cold Noodle
+X2 Sour and Spicy Intestine Noodle
+X3 JI Dan Dan Noodle
+X4 H Chengdu Mung Bean Jelly
+X5 Sweet Soft Tofu
+X6 EHot and Sour Soft Tofu
+X7(8) Red Oil Dumplings
+X8(10) Red Oil Wontons
+X9 (10) Original Wontons
+6.95
+5.95
+6.95
+5.95
+4.95
+4.95
+6.95
+6.95
+6.95
+Pork
+P1 i Shredded Pork in Spicy Garlic Sauce
+P2 S Shredded Pork with Bamboo Shoots
+P3T Shredded Pork with Spiced Dry Tofu
+P4 Sauted Shredded Pork in Beijing Bean Sauce
+P5 E Sauted Pork Bacon and Veggies
+P6 Twice Cooked Pork
+P7 Stir Fried Pork Kidneys
+P8  Prosper at 5AM
+P9 T Crispy and Spicy Pork Intestines
+P10  Basil Intestines
+P11Ants on the Tree
+10.95
+10.95
+10.95
+11.95
+11.95
+11.95
+11.95
+11.95
+11.95
+11.95
+10.95
+
