@@ -184,16 +184,19 @@ def final_dump(menu, pref, dump, dumpsavename):
 # create dictionary
 d = load_words()
 
+pref_location = "menu_read\\pref_sample.txt"
+
 # run test with normal pictures
-
-# detect_text('ocr\menupictures\pic6.jpg', 'pic6test')
-
+pic_loc = 'ocr\\menupictures\\othermenu\\othermenu3.jpg'
+test_file_name = 'othermenutest3'
+detect_text(pic_loc, test_file_name)
+print(final_dump('ocr\\menu_tests\\' + test_file_name + '.txt', pref_location, True, test_file_name))
 
 # run test with weird pictures
 
-for i in range(2, 5):
-    pic_loc = 'ocr\menupictures\weirdpic\wpic' + str(i) + '.jpg'
-    weird_file_name = 'weirdfiletest' + str(i)
-    detect_text(pic_loc, weird_file_name)
-    print(final_dump("ocr\menu_tests\weirdfiletest" + str(i) + ".txt",
-                     "menu_read\pref_sample.txt", True, "weirdpic" + str(i)))
+# for i in range(2, 5):
+#     pic_loc = 'ocr\menupictures\weirdpic\wpic' + str(i) + '.jpg'
+#     file_name = 'weirdfiletest' + str(i)
+#     detect_text(pic_loc, file_name)
+#     print(final_dump("ocr\menu_tests\weirdfiletest" + str(i) + ".txt",
+#                      pref_location, True, "weirdpic" + str(i)))
