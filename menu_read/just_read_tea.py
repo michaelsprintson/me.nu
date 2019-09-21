@@ -135,7 +135,7 @@ def final_dump(menu, pref, dump, dumpsavename):
     return menudict
 
 
-print(final_dump("ocr\\menu_tests\\othermenutest3.txt", "menu_read\\pref_sample.txt", True, "othermenutest3"))
+print(final_dump("ocr\\menu_tests\\teamenu.txt", "menu_read\\pref_sample.txt", True, "teamenu"))
 
 
 

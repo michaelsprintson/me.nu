@@ -58,6 +58,6 @@ def detect_text(path, savepath):
 # create dictionary
 d = load_words()
 
-pic_loc = 'ocr\\menupictures\\othermenu\\othermenu9.jpg'
-test_file_name = 'othermenutest9'
+pic_loc = 'ocr\\menupictures\\othermenu\\teamenu.jpg'
+test_file_name = 'teamenu'
 detect_text(pic_loc, test_file_name)
