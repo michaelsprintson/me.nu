@@ -56,7 +56,7 @@ def detect_text(path, savepath):
         first_word = text_lst[0] if text_lst else ''
         if first_word and not first_word[-1].isdigit():
             first_word = first_word[:-1]
-        
+    
         file1.writelines(first_word + ' ' + ' '.join([word for word in text_lst[1:] if (len(word) > 2 and word.lower() in d)]) + '\n')
 
     file1.close()
@@ -74,7 +74,7 @@ d = load_words()
 
 # run test with weird pictures
 
-for i in range(1, 20):
+for i in range(2, 5):
     pic_loc = 'ocr\menupictures\weirdpic\wpic' + str(i) + '.jpg'
     weird_file_name = 'weirdfiletest' + str(i)
     detect_text(pic_loc, weird_file_name)

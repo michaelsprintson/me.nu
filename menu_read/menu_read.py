@@ -156,7 +156,7 @@ def filter(menu_dict, user_pref):
     return newdict
 
 
-def final_dump(menu, pref, dump):
+def final_dump(menu, pref, dump, dumpsavename):
     """
     :param menu: OCR result of menu as txt
     :param pref: preferences input as txt
@@ -169,12 +169,14 @@ def final_dump(menu, pref, dump):
     menudict = make_fooddict(foods, prices)
     menudict = filter(menudict, pref)
     if dump:
-        with open('first_page_cleaned_menu_dict.json', 'w') as cleaned_menu:
+        with open("menu_read\\menuJSON\\" + dumpsavename + '.json', 'w') as cleaned_menu:
             json.dump(menudict, cleaned_menu)
     return menudict
 
-# for i in range(2,16):
-#     print (final_dump("ocr\menu_tests\weirdfiletest" + str(i) + ".txt", "menu_read\pref_sample.txt", False))
+
+
+for i in range(2,5):
+    print (final_dump("ocr\menu_tests\weirdfiletest" + str(i) + ".txt", "menu_read\pref_sample.txt", True, "weirdpic" + str(i)))
 
 
 """
