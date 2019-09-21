@@ -42,6 +42,10 @@ def detect_text(path, savepath):
         first_word = text_lst[0] if text_lst else ''
         # if first_word and not first_word[-1].isdigit():
         #     first_word = first_word[:-1]
+        
+        if first_word:
+            if first_word[0] == "(":
+                continue
 
         file1.writelines(first_word + ' ' + ' '.join(
             [word for word in text_lst[1:] if (len(word) > 2 and word.lower() in d)]) + '\n')
@@ -54,6 +58,6 @@ def detect_text(path, savepath):
 # create dictionary
 d = load_words()
 
-pic_loc = 'ocr\\menupictures\\othermenu\\othermenu3.jpg'
-test_file_name = 'othermenutest3'
+pic_loc = 'ocr\\menupictures\\othermenu\\othermenu9.jpg'
+test_file_name = 'othermenutest9'
 detect_text(pic_loc, test_file_name)
