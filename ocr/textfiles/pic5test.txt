@@ -36,7 +36,7 @@ Loca
 X1 House Special Cold Noodle
 X2 Sour and Spicy Intestine Noodle
 X3 Dan Dan Noodle
-X4 Mung Bean Jelly
+X4 Chengdu Mung Bean Jelly
 X5 Sweet Soft Tofu
 X6 Hot and Sour Soft Tofu
 X7 Red Oil Dumplings
@@ -57,7 +57,7 @@ P1 Shredded Pork Spicy Garlic Sauce
 P2 Shredded Pork with Bamboo Shoots
 P3 Shredded Pork with Spiced Dry Tofu
 P4 Saut Shredded Pork Bean Sauce
-P5 Saut Pork Bacon and
+P5 Saut Pork Bacon and Veggies
 P6 Twice Cooked Pork
 P7 Stir Fried Pork Kidneys
 P8 Prosper

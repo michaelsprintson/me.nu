@@ -3,12 +3,9 @@ import os
 import re
 import json
 from google.cloud import vision
-import io
 
-# This is 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\Users\User\Documents\me.nu\ocr\ocrtest1-824f812b3427.json"
-
-
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\shjan\Coding\me.nu\ocr\ocrtest1-824f812b3247.json"
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\\Users\\User\\Documents\\me.nu\\ocr\\ocrtest1-824f812b3247.json"
 
 # # Imports the Google Cloud client library
 # from google.cloud import vision
@@ -41,19 +38,14 @@ def load_words():
     return valid_words
 
 
-
 d = load_words()
-
-
 
 
 def detect_text(path, savepath):
     """Detects text in the file."""
 
-
-
-    file1 = io.open("ocr\\textfiles\\" + savepath + ".txt","w", encoding="utf-8")
-
+    file1 = io.open("ocr\\textfiles\\" + savepath +
+                    ".txt", "w", encoding="utf-8")
 
     client = vision.ImageAnnotatorClient()
 
@@ -66,23 +58,22 @@ def detect_text(path, savepath):
     texts = response.text_annotations
 
     for text in texts[0].description.split('\n'):
-        text_no_chinese = re.sub("([^\x82\x00-\x7F])+"," ", text)
-        
-        #print(text_no_chinese)
+        text_no_chinese = re.sub("([^\x82\x00-\x7F])+", " ", text)
+
+        # print(text_no_chinese)
 
         text_lst = []
         # if not text_no_chinese.isdigit():
         text_lst = text_no_chinese.split()
-        
+
         first_word = text_lst[0] if text_lst else ''
         if first_word and not first_word[-1].isdigit():
             first_word = first_word[:-1]
 
-
-        file1.writelines(first_word + ' ' + ' '.join([word for word in text_lst[1:] if (len(word) > 2 and word.lower() in d)]) + '\n')
+        file1.writelines(first_word + ' ' + ' '.join(
+            [word for word in text_lst[1:] if (len(word) > 2 and word.lower() in d)]) + '\n')
 
     file1.close()
-
 
     # for count_text_index, text in enumerate(texts):
 
@@ -95,12 +86,8 @@ def detect_text(path, savepath):
     #     #print('bounds: {}'.format(','.join(vertices)))
 
 
-
-
-
 # run test with normal pictures
 detect_text('ocr\menupictures\pic5.jpg', 'pic5test')
-
 
 
 # run test with weird pictures
