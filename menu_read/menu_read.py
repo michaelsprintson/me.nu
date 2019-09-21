@@ -99,20 +99,36 @@ for sec3idx in range(len(sec3)): #add the third sections entries
     menu_dict[sec3[sec3idx].strip()] = float(sec3prices[sec3idx].strip())
 
 
-print (menu_dict)
 
 #print(len(menu_dict))
+meats = {"Beef", "Pork", "Duck", "Chicken", "Lamb", "Blood", "Lung", "Meat", "Fish", "Clam", "Tripe", "Prawn", "Rib", "Tilapia"}
+
+print ("beef" in 'crispy beef', 'hi')
+
+##filters out
 newdict = {}
 for dish in menu_dict:
+    item = menu_dict[dish]
     if menu_dict[dish] <= budget:
-        newdict[dish] = menu_dict[dish]
+        if not eats_meat:
+            for meat in meats:
+                if meat in dish:
+                    nomeat = False
+                    print (dish)
+            if nomeat:
+                 newdict[dish] = menu_dict[dish]
+        else:
+            newdict[dish] = menu_dict[dish]
+
 #
+print (newdict)
+
 # print ("_______________________")
 # print (newdict)
 #print (len(newdict))
 
-
-with open('cleaned_menu_dict.json', 'w') as cleaned_menu:
-    json.dump(newdict, cleaned_menu)
-
 #
+# with open('cleaned_menu_dict.json', 'w') as cleaned_menu:
+#     json.dump(newdict, cleaned_menu)
+#
+# #
