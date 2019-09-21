@@ -17,7 +17,7 @@ This file reads menu OCR results from myfile.txt and dumps json dictionary of me
 
 
 def load_words():
-    with open(r"ocr\words_alpha.txt") as word_file:
+    with open(r"ocr\wa.txt") as word_file:
         valid_words = set(word_file.read().split())
     return valid_words
 
@@ -55,9 +55,12 @@ def detect_text(path, savepath):
 
 
 
+
+os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
+
 # create dictionary
 d = load_words()
 
-pic_loc = 'ocr\\menupictures\\othermenu\\shareteatest2.jpg'
-test_file_name = 'shareteamenu2'
+pic_loc = 'ocr/menupictures/shareteanocolor.jpg'
+test_file_name = 'shareteanocolor'
 detect_text(pic_loc, test_file_name)
