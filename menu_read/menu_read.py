@@ -106,13 +106,13 @@ newdict = {}
 for dish in menu_dict:
     if menu_dict[dish] <= budget:
         newdict[dish] = menu_dict[dish]
-
-print ("_______________________")
-print (newdict)
+#
+# print ("_______________________")
+# print (newdict)
 #print (len(newdict))
 
 
-# with open('cleaned_menu_dict.json', 'w') as cleaned_menu:
-#     json.dump(menu_dict, cleaned_menu)
+with open('cleaned_menu_dict.json', 'w') as cleaned_menu:
+    json.dump(newdict, cleaned_menu)
+
 #
-# #
