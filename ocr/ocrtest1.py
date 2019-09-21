@@ -51,18 +51,27 @@ def detect_text(path):
     texts = response.text_annotations
     print('Texts:')
 
+    #print(type(texts[0].description))
+    new_texts = texts[0].description.split('\n')
+    print(new_texts)
 
-
-
-    for text in texts:
-        print('\n"{}"'.format(text.description))
-        file1.writelines(text.description)
-
-        vertices = (['({},{})'.format(vertex.x, vertex.y)
-                    for vertex in text.bounding_poly.vertices])
-
-        print('bounds: {}'.format(','.join(vertices)))
+    for text in new_texts:
+        file1.writelines(text + '\n')
 
     file1.close()
 
+
+    # for count_text_index, text in enumerate(texts):
+
+    #     print('\n{} {}"'.format(count_text_index, text.description))
+    #     file1.writelines(text.description)
+
+    #     vertices = (['({},{})'.format(vertex.x, vertex.y)
+    #                 for vertex in text.bounding_poly.vertices])
+
+    #     #print('bounds: {}'.format(','.join(vertices)))
+
+
+
+# run test with a picture
 detect_text('ocr\menupictures\pic3.jpg')
