@@ -5,7 +5,7 @@ H3 Country Style Blood Curd Dish
 H4 Beef Pot
 H5 and Crispy Chicken
 H6 Duck Stew
-H7 Beef
+H7 Konjac Beef
 H8 Lotus Tofu
 H9 Three Pepper Beaten Duck
 H10 Tea Smoked Duck
@@ -31,7 +31,7 @@ H12 Fragrant Ribs
  
 F1 Northern Boiling Fish
 F2 Sauerkraut Fish Pot
-F3 Style Pot Roasted Tilapia
+F3 Chengdu Style Pot Roasted Tilapia
 F4 Mala Pot Roasted Tilapia
 F5 Bean Curd Tilapia Stew
 F7 Pot Roasted Black Bean Tilapia
@@ -68,8 +68,8 @@ B5 Mongolian Beef
 B6 Crispy Mala Beef
 B7 Baby Pepper Black Bean Beef
 B8 Baby Pepper and Shredded Beef
-B9 Beef
-B12 Sauteed Lamb with
+B9 Satay Beef
+B12 Sauteed Lamb with Veggies
 B11 Cumin Lamb
 13.95 
 13.95 
