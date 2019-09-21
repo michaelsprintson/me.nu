@@ -6,8 +6,24 @@
 {% endblock %}
 
 {% block body %}
-<div id="my_camera" style="width:320px; height:240px;"></div>
-<div id="my_result"></div>
+<div id="wrapper">
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <!-- Header -->
+                <header id="header" style="padding-top: 3.5em">
+                    <span class="icons">Logged in as <strong>Timothy</strong></span>
+                </header>
+            <section>
+                <header class="major">
+                    <h2>Take a picture of the menu</h2>
+                </header>
+                <div id="my_camera" style="width:320px; height:240px;"></div>
+                <div id="my_result"></div>
 
-<a href="javascript:void(take_snapshot())">Take Snapshot</a>
+                <a href="javascript:void(take_snapshot())">Take Snapshot</a>
+            </section>
+        </div>
+    </div>
+</div>
 {% endblock %}
