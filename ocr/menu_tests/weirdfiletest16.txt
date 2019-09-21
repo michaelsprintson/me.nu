@@ -1,58 +1,58 @@
-Crab Meat and Asparagus Soup
-Fish Fillet and Sauerkraut Soup
-West Lake Soup
-Winter Melon and Meatball Soup
-Egg and Tomato Soup
-T1
-9.95
-T2
-8.95
-T3
-8.95
-T4
-8.95
-T5
-8.95
-T6
-Hot and Sour Soup
-8.95
-bod
-S1 (12) Mala Pot Roasted Prawns
-S2 (12) Chengdu Style Pot Roasted Prawns
-S3 (12) Simmered Prawns with Veggies
-S4 F(12) Salt and Pepper Prawns
-S5 AfiWater Boiled Fish Fillet
-S6 fFish Fillet with Pickled Pepper
+Cra Meat and Asparagus Soup
+Fis Fillet and Sauerkraut Soup
+Wes Lake Soup
+Winte Melon and Meatball Soup
+Eg and Tomato Soup
+T1 
+9.95 
+T2 
+8.95 
+T3 
+8.95 
+T4 
+8.95 
+T5 
+8.95 
+T6 
+Ho and Sour Soup
+8.95 
+bo 
+S1 Mala Pot Roasted Prawns
+S2 Chengdu Style Pot Roasted Prawns
+S3 Simmered Prawns with Veggies
+S4 Salt and Pepper Prawns
+S5 Boiled Fish Fillet
+S6 Fillet with Pickled Pepper
 S7 Celery Fish Fillet
 S8 Sweet Wine Fish Fillet
-S9 EE Mala Fish Fillet with Super Soft Tofu
+S9 Mala Fish Fillet with Super Soft Tofu
 S10 Shrimp with Asparagus
 S11 Shrimp with Tofu
-17.95
-17.95
-17.95
-17.95
-13.95
-12.95
-12.95
-12.95
-12.95
-11.95
-10.95
-Bhichen
-TKung Pao Chicken
-Pickled Pepper Chicken
-Celery Chicken
-TCrispy Chicken
-Chicken Leg with Serrano Peppers
-C1
-11.95
-C2
-10.95
-C3
-10.95
-C4 h
-11.95
-C6
-10.95
-
+17.95 
+17.95 
+17.95 
+17.95 
+13.95 
+12.95 
+12.95 
+12.95 
+12.95 
+11.95 
+10.95 
+Bhiche 
+TKun Chicken
+Pickle Pepper Chicken
+Celer Chicken
+TCrisp Chicken
+Chicke Leg with Serrano Peppers
+C1 
+11.95 
+C2 
+10.95 
+C3 
+10.95 
+C4 
+11.95 
+C6 
+10.95 
+ 
