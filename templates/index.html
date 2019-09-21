@@ -42,51 +42,53 @@
 				<div id="sidebar">
 					<div class="inner">
 						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>User Preferences</h2>
-								</header>
+						<section>
+							<header class="major">
+								<h2>User Preferences</h2>
+							</header>
 
-								<header class="major">
-									<h3>Budget</h3>
-								</header>
-								<p>How much are you looking to spend on a single dish?</p>
-								<input type="text" name="budget" value="15.00">
+							<header class="major">
+								<h3>Budget</h3>
+							</header>
+							<p>How much are you looking to spend on a single dish?</p>
+							<input type="text" name="budget" value="15">
 
-								<br />
+							<br />
 
-								<header class="major">
-									<h3>Dietary Restrictions</h3>
-								</header>
-								<p>Please select any dietary restrictions you have.</p>
-								<input type="checkbox" id="dietVeg" name="diet-veg">
-								<label for="dietVeg">Vegetarian</label><br />
-								<input type="checkbox" id="dietNuts" name="diet-nuts">
-								<label for="dietNuts">No tree nuts</label><br />
-								<input type="checkbox" id="dietSea" name="diet-sea">
-								<label for="dietSea">No seafood</label><br />
+							<header class="major">
+								<h3>Dietary Restrictions</h3>
+							</header>
+							<div>Are you vegetarian?<br />
+								<input type="radio" id="yesVeg" name="diet-veg">
+								<label for="yesVeg">Yes</label>
+								<input type="radio" id="noVeg" name="diet-veg" checked>
+								<label for="noVeg">No</label>
+							</div>
 
-								<br />
+							<div>Enter any foods you would like to exclude (separated by commas).
+								<input type="text" name="diet-exclude" value="chili, peanut">
+							</div>
+							<br />
 
-								<header class="major">
-									<h3>Past Meals You've Liked</h3>
-								</header>
-								<p>Based on your Yelp account.</p>
-								<div class="mini-posts">
-									<article>
-										<a href="#" class="image"><img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt="" /></a>
-										<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt="" /></a>
-										<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt="" /></a>
-										<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-									</article>
-								</div>
-							</section>
+							<header class="major">
+								<h3>Past Meals You've Liked</h3>
+							</header>
+							<p>Based on your Yelp account.</p>
+							<div class="mini-posts">
+								<article>
+									<a href="#" class="image"><img src="{{ url_for('static', filename='images/sushi.jpg') }}" alt="" /></a>
+									<h3>Tamashi Sushi Sashimi Combo</h3>
+								</article>
+								<article>
+									<a href="#" class="image"><img src="{{ url_for('static', filename='images/beefNoodle.jpg') }}" alt="" /></a>
+									<h3>Noodle House Beef Noodle Soup</h3>
+								</article>
+								<article>
+									<a href="#" class="image"><img src="{{ url_for('static', filename='images/roastbbq.jpg') }}" alt="" /></a>
+									<h3>Hong Kong Food Street Roast BBQ Pork</h3>
+								</article>
+							</div>
+						</section>
 					</div>
 				</div>
 		</div>
