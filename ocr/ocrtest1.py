@@ -77,5 +77,5 @@ def detect_text(path):
 
 
 # run test with a picture
-detect_text('ocr\menupictures\pic3.jpg')
-#detect_text('ocr\menupictures\pic7.jpg')
+#detect_text('ocr\menupictures\pic3.jpg')
+detect_text('ocr\menupictures\pic7.jpg')
