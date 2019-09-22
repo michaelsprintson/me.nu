@@ -24,8 +24,7 @@
                 <div id="my_camera" style="width:320px; height:240px;"></div>
 
                 <a href="javascript:void(take_snapshot())">Take Snapshot</a>
-
-                {% if pic_error %}
+                {% if pic_error in ['True'] %}
                     <p style="color:red;">Picture was not clear, please try again.</p>
                 {% endif %}
             </section>
