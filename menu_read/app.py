@@ -1,6 +1,7 @@
 import os
 import json
 from flask import Flask, flash, render_template, request, redirect, url_for, send_from_directory
+import reviewparse
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = './static'
@@ -14,13 +15,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def index():
     if request.method == 'POST':
         json.dump(request.form, open('preferencesData.json', 'w'))
-        # extract form data
-        # write to txt file
-    return render_template('index.html')
-
-
-@app.route('/savePreferences', methods=['POST', 'GET'])
-def save_preferences():
     return render_template('index.html')
 
 
@@ -29,8 +23,19 @@ def choose_menu():
     return render_template('chooseMenu.html')
 
 
-@app.route('/takePic')
-def take_pic():
+@app.route('/takePicMala')
+def take_pic_mala():
+    text_file = open("foodChoice.txt", "w")
+    text_file.write("True")
+    text_file.close()
+    return render_template('takePic.html')
+
+
+@app.route('/takePicSharetea')
+def take_pic_sharetea():
+    text_file = open("foodChoice.txt", "w")
+    text_file.write("False")
+    text_file.close()
     return render_template('takePic.html')
 
 
@@ -79,7 +84,9 @@ def loading():
 
 @app.route('/suggestedMenu')
 def suggested_menu():
-    return render_template('suggestedMenu.html')
+    reviewparse.run()
+    menu_data = json.load(open('ranking.json'))
+    return render_template('suggestedMenu.html', menuData=menu_data)
 
 
 @app.route('/foo')
