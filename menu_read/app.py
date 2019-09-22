@@ -94,11 +94,11 @@ def suggested_menu():
     # Get user preferences
 
     # food = True
-    # pic_loc = 'ocr/menupictures/pic7.jpg'
-    # pref = "pref_sample.txt"
+    pic_loc = 'ocr/menupictures/pic7.jpg'
+    pref = "pref_sample.txt"
 
     # Analyze menu
-    # reviewparse.overall(food, pic_loc, pref)
+    reviewparse.overall(food, pic_loc, pref)
 
     # Pass information to results page
     menu_data = json.load(open('ranking.json'))

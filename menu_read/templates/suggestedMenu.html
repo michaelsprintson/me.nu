@@ -25,27 +25,30 @@
                         <h2>Suggested Menu</h2>
                     </header>
                     <div class="posts">
-                        <article>
-                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>
-                            <h3>Mala Sichuan Bistro</h3>
-                            <ul class="actions">
-                                <li><a href="/takePic" class="button">Select</a></li>
-                            </ul>
-                        </article>
-                        <article>
-                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>
-                            <h3>East West Tea</h3>
-                            <ul class="actions">
-                                <li><a href="#" class="button">Select</a></li>
-                            </ul>
-                        </article>
-                        <article>
-                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>
-                            <h3>JINYA Ramen</h3>
-                            <ul class="actions">
-                                <li><a href="#" class="button">Select</a></li>
-                            </ul>
-                        </article>
+                        {% for menuItem in menuData %}
+                           <p>{{ loop.index }}. {{ menuItem.capitalize() }}, price: ${{ menuData[menuItem]['price'] }}, score: {{ menuData[menuItem]['totalscore'] }}</p>
+                        {% endfor %}
+<!--                        <article>-->
+<!--                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>-->
+<!--                            <h3>Mala Sichuan Bistro</h3>-->
+<!--                            <ul class="actions">-->
+<!--                                <li><a href="/takePic" class="button">Select</a></li>-->
+<!--                            </ul>-->
+<!--                        </article>-->
+<!--                        <article>-->
+<!--                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>-->
+<!--                            <h3>East West Tea</h3>-->
+<!--                            <ul class="actions">-->
+<!--                                <li><a href="#" class="button">Select</a></li>-->
+<!--                            </ul>-->
+<!--                        </article>-->
+<!--                        <article>-->
+<!--                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>-->
+<!--                            <h3>JINYA Ramen</h3>-->
+<!--                            <ul class="actions">-->
+<!--                                <li><a href="#" class="button">Select</a></li>-->
+<!--                            </ul>-->
+<!--                        </article>-->
                     </div>
                 </section>
             </div>
