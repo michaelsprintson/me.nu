@@ -89,12 +89,10 @@ def suggested_menu():
     foodChoice = open("foodChoice.txt", "r")
     food = foodChoice.readline() in ['True']
 
-    # Get menu pic
-
-    # Get user preferences
-
-    # food = True
+    # Get image
     pic_loc = 'static/webcam.jpg'
+
+    # Get preferences
     pref = "preferencesData.json"
 
     # Analyze menu
@@ -108,7 +106,7 @@ def suggested_menu():
     for menu_item in menu_data:
         if i < 3:
             top_items.append(menu_item)
-        else:
+        elif len(other_items) < 7:
             other_items.append(menu_item)
         i += 1
     return render_template('suggestedMenu.html', topItems=top_items, otherItems=other_items, menuData=menu_data)
