@@ -315,7 +315,7 @@ def overall(food, pic_loc,pref):
     #userreviewdf = wikiscrape(username)
     #userreviewdf = userreviewdf.reset_index().drop(['index'],axis = 1)
 
-    userreviewdf = pd.read_json('userreviews')
+    userreviewdf = pd.read_json('menu_read/userreviews')
 
     userreviewdf.columns = ['reviewRating','description']
     userreviewdf['reviewRating'] = userreviewdf['reviewRating'].apply(lambda x: int(x[0:1]))
@@ -349,7 +349,7 @@ def overall(food, pic_loc,pref):
     #
     # allfoods = [x.lower() for x in allfoods]
 
-    with open('/menu_read/allfoods.json') as f:
+    with open('menu_read/allfoods.json') as f:
         allfoods = json.load(f)
 
     ## food preferences by users reviews
