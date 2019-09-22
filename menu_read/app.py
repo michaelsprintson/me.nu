@@ -127,4 +127,4 @@ def suggested_menu():
 
 if __name__ == "__main__":
     app.secret_key = 'super secret key'
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
