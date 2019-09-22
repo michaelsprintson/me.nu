@@ -14,8 +14,6 @@ This file reads menu OCR results from myfile.txt and dumps json dictionary of me
 """
 
 
-
-
 def load_words():
     with open(r"ocr/wa.txt") as word_file:
         valid_words = set(word_file.read().split())

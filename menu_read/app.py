@@ -85,7 +85,8 @@ def loading():
 @app.route('/suggestedMenu')
 def suggested_menu():
     reviewparse.run()
-    return render_template('suggestedMenu.html')
+    menu_data = json.load(open('ranking.json'))
+    return render_template('suggestedMenu.html', menuData=menu_data)
 
 
 @app.route('/foo')
