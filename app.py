@@ -22,7 +22,7 @@ def index():
             submission_message = "Invalid input, please try again"
         did_update = True
     # Load user preferences
-    user_preferences = json.load(open('preferencesData.json'))
+    user_preferences = json.load(open('menu_read/preferencesData.json'))
     return render_template('index.html', user_preferences=user_preferences, did_update=did_update, submission_message=submission_message)
 
 
