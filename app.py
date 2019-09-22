@@ -90,7 +90,7 @@ def suggested_menu():
     food = foodChoice.readline() in ['True']
 
     # Get image
-    pic_loc = 'menu_read/static/webcam.jpg'
+    pic_loc = 'static/webcam.jpg'
 
     # Get preferences
     pref = "menu_read/preferencesData.json"
