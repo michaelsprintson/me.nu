@@ -8,10 +8,10 @@ from google.cloud import vision
 # set environment variable for google api credential
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "apikey.json"
 
-
 """
 This file reads menu OCR results from myfile.txt and dumps json dictionary of menu item to price
 """
+
 
 def load_words(filename):
     with open(filename) as word_file:
