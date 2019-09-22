@@ -14,7 +14,8 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        json.dump(request.form, open('preferencesData.json', 'w'))
+        if request.form['budget'].isdigit():
+            json.dump(request.form, open('preferencesData.json', 'w'))
     return render_template('index.html')
 
 
