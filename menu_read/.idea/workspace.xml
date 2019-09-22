@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2a5a2512-17e0-4766-a3f5-f18b98ccb1ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu_parse/.ipynb_checkpoints/reviewparse-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/menu_parse/.ipynb_checkpoints/reviewparse-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu_parse/reviewparse.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/menu_parse/reviewparse.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ranking" beforeDir="false" afterPath="$PROJECT_DIR$/ranking" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ranking.json" beforeDir="false" afterPath="$PROJECT_DIR$/ranking.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reviewparse.py" beforeDir="false" afterPath="$PROJECT_DIR$/reviewparse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,21 +20,12 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/reviewparse.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="278">
-                  <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
+                <state relative-caret-position="266">
+                  <caret line="399" column="28" lean-forward="true" selection-start-line="399" selection-start-column="28" selection-end-line="399" selection-end-column="28" />
                   <folding>
                     <element signature="e#2#21#0" expanded="true" />
-                    <marker date="1569121649573" expanded="false" signature="2:233" ph="..." />
+                    <marker date="1569122899928" expanded="false" signature="2:225" ph="..." />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ranking">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="37" selection-start-column="37" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
@@ -44,7 +34,7 @@
             <entry file="file://$PROJECT_DIR$/just_read_tea.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="291">
-                  <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+                  <caret line="140" selection-start-line="140" selection-end-line="140" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -61,7 +51,7 @@
             <entry file="file://$PROJECT_DIR$/ocr_food.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="251">
-                  <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="32" />
+                  <caret line="23" column="32" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -77,7 +67,7 @@
             <entry file="file://$PROJECT_DIR$/just_read_food.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="735">
-                  <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+                  <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -88,8 +78,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ocr_tea.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="199">
-                  <caret line="28" selection-start-line="28" selection-end-line="28" />
+                <state relative-caret-position="289">
+                  <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -284,7 +274,7 @@
     <entry file="file://$PROJECT_DIR$/just_read_tea.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
-          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -297,7 +287,7 @@
     <entry file="file://$PROJECT_DIR$/just_read_food.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
-          <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -307,17 +297,7 @@
     <entry file="file://$PROJECT_DIR$/ocr_food.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
-          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ocr_tea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="32" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -331,13 +311,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ocr_tea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/reviewparse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
+        <state relative-caret-position="266">
+          <caret line="399" column="28" lean-forward="true" selection-start-line="399" selection-start-column="28" selection-end-line="399" selection-end-column="28" />
           <folding>
             <element signature="e#2#21#0" expanded="true" />
-            <marker date="1569121649573" expanded="false" signature="2:233" ph="..." />
+            <marker date="1569122899928" expanded="false" signature="2:225" ph="..." />
           </folding>
         </state>
       </provider>
