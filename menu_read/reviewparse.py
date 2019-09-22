@@ -11,13 +11,11 @@ from itertools import cycle
 import string
 import os
 import math
+from sklearn import preprocessing
 import sys
-# In[2]:
 
-
+#os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
 os.chdir("/Users/michaelsprintson/Documents/GitHub/me.nu/menu_read/")
-
-
 
 
 # In[7]:
@@ -343,12 +341,13 @@ def overall(food, pic_loc,pref):
         alla = list(table.findAll('a'))
         chinesefoods = chinesefoods +[x for x in[alla[i].get('title') for i in range(len(alla))] if type(x) == str]
 
-    from nltk.corpus import wordnet as wn
-    allfoods = list(set([w for s in wn.synset('food.n.02').closure(lambda s:s.hyponyms()) for w in s.lemma_names()])) + chinesefoods
+    # from nltk.corpus import wordnet as wn
+    # allfoods = list(set([w for s in wn.synset('food.n.02').closure(lambda s:s.hyponyms()) for w in s.lemma_names()])) + chinesefoods
+    #
+    # allfoods = [x.lower() for x in allfoods]
 
-    allfoods = [x.lower() for x in allfoods]
-
-    len(allfoods)
+    with open('allfoods.json') as f:
+        allfoods = json.load(f)
 
     ## food preferences by users reviews
 
@@ -388,17 +387,27 @@ def overall(food, pic_loc,pref):
     allmen = pd.DataFrame(json.load(open('menuJSON/final.json')),index=range(2)).T
     itemratings['price'] = allmen[0].values
 
+    min_max_scaler = preprocessing.MinMaxScaler()
+
+    x = itemratings[['totalscore']].values.astype(float)
+    # Create an object to transform the data to fit minmax processor
+    itemrating_scaled = min_max_scaler.fit_transform(x)
+
+    itemratings['totalscore'] = [math.ceil(10* x[0]) for x in itemrating_scaled]
+
     print(itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False))
 
-    itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).T.to_json('ranking')
-
-food = True
-
-#pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
-pic_loc = 'ocr/menupictures/pic7.jpg'
+    itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).T.to_json('ranking.json')
 
 
-pref = "pref_sample.txt"
+def run():
+    food = True
 
-overall(food, pic_loc,pref)
+    #pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
+    pic_loc = 'ocr/menupictures/pic7.jpg'
+
+    pref = "pref_sample.txt"
+
+    overall(food, pic_loc, pref)
+
 

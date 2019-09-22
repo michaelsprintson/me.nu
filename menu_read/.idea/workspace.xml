@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2a5a2512-17e0-4766-a3f5-f18b98ccb1ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu_parse/.ipynb_checkpoints/reviewparse-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/menu_parse/.ipynb_checkpoints/reviewparse-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allfoods.json" beforeDir="false" afterPath="$PROJECT_DIR$/allfoods.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu_parse/reviewparse.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/menu_parse/reviewparse.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ranking" beforeDir="false" afterPath="$PROJECT_DIR$/ranking" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reviewparse.py" beforeDir="false" afterPath="$PROJECT_DIR$/reviewparse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,21 +20,12 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/reviewparse.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="278">
-                  <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
+                <state relative-caret-position="330">
+                  <caret line="399" column="40" selection-start-line="399" selection-start-column="40" selection-end-line="399" selection-end-column="40" />
                   <folding>
                     <element signature="e#2#21#0" expanded="true" />
-                    <marker date="1569121649573" expanded="false" signature="2:233" ph="..." />
+                    <marker date="1569125242752" expanded="true" signature="2:259" ph="..." />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ranking">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="37" selection-start-column="37" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
@@ -44,7 +34,7 @@
             <entry file="file://$PROJECT_DIR$/just_read_tea.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="291">
-                  <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+                  <caret line="140" selection-start-line="140" selection-end-line="140" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -61,7 +51,7 @@
             <entry file="file://$PROJECT_DIR$/ocr_food.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="251">
-                  <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="32" />
+                  <caret line="23" column="32" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -77,7 +67,7 @@
             <entry file="file://$PROJECT_DIR$/just_read_food.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="735">
-                  <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+                  <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -88,8 +78,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ocr_tea.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="199">
-                  <caret line="28" selection-start-line="28" selection-end-line="28" />
+                <state relative-caret-position="289">
+                  <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -105,6 +95,7 @@
     <findStrings>
       <find>userreviewdf</find>
       <find>import</find>
+      <find>nltk</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,29 +131,6 @@
             <path>
               <item name="menu_read" type="b2602c69:ProjectViewProjectNode" />
               <item name="menu_read" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="menu_read" type="b2602c69:ProjectViewProjectNode" />
-              <item name="menu_read" type="462c0819:PsiDirectoryNode" />
-              <item name="menu_parse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="menu_read" type="b2602c69:ProjectViewProjectNode" />
-              <item name="menu_read" type="462c0819:PsiDirectoryNode" />
-              <item name="ocr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="menu_read" type="b2602c69:ProjectViewProjectNode" />
-              <item name="menu_read" type="462c0819:PsiDirectoryNode" />
-              <item name="ocr" type="462c0819:PsiDirectoryNode" />
-              <item name="menupictures" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="menu_read" type="b2602c69:ProjectViewProjectNode" />
-              <item name="menu_read" type="462c0819:PsiDirectoryNode" />
-              <item name="ocr" type="462c0819:PsiDirectoryNode" />
-              <item name="menupictures" type="462c0819:PsiDirectoryNode" />
-              <item name="othermenu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -252,12 +220,12 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.088794924" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.3299363" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3299539" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.37579617" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.37579617" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -284,7 +252,7 @@
     <entry file="file://$PROJECT_DIR$/just_read_tea.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
-          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -297,7 +265,7 @@
     <entry file="file://$PROJECT_DIR$/just_read_food.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
-          <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -307,17 +275,7 @@
     <entry file="file://$PROJECT_DIR$/ocr_food.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
-          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ocr_tea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="32" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -331,13 +289,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ocr_tea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/reviewparse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
+        <state relative-caret-position="330">
+          <caret line="399" column="40" selection-start-line="399" selection-start-column="40" selection-end-line="399" selection-end-column="40" />
           <folding>
             <element signature="e#2#21#0" expanded="true" />
-            <marker date="1569121649573" expanded="false" signature="2:233" ph="..." />
+            <marker date="1569125242752" expanded="true" signature="2:259" ph="..." />
           </folding>
         </state>
       </provider>
