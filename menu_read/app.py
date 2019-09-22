@@ -13,10 +13,17 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
+    did_update = False
+    submission_message = "Preferences saved!"
     if request.method == 'POST':
         if request.form['budget'].isdigit():
             json.dump(request.form, open('preferencesData.json', 'w'))
-    return render_template('index.html')
+        else:
+            submission_message = "Invalid input, please try again"
+        did_update = True
+    # Load user preferences
+    user_preferences = json.load(open('preferencesData.json'))
+    return render_template('index.html', user_preferences=user_preferences, did_update=did_update, submission_message=submission_message)
 
 
 @app.route('/chooseMenu')
