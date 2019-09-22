@@ -55,7 +55,7 @@ def overall(food, pic_loc,pref):
     # In[10]:
 
 
-    jr.final_dump("ocr/menu_tests/final.txt", pref, True, "final")
+    jr.final_dump("menu_read/ocr/menu_tests/final.txt", pref, True, "final")
 
 
     # # IMPORT RESTERAUNT REVIEWS
@@ -79,9 +79,9 @@ def overall(food, pic_loc,pref):
 
 
     if food:
-        reviewdf = pd.read_json('menu_parse/bigmala')
+        reviewdf = pd.read_json('menu_read/menu_parse/bigmala')
     elif not food:
-        reviewdf = pd.read_json('menu_parse/sharetea')
+        reviewdf = pd.read_json('menu_read/menu_parse/sharetea')
         s = lambda x: list(x.values())[0]
         reviewdf['reviewRating'] = reviewdf['reviewRating'].apply(s)
     else:
@@ -122,7 +122,7 @@ def overall(food, pic_loc,pref):
     # In[14]:
 
 
-    gmapsapikey = json.load(open('menu_parse/gmapsapikey.json', 'r'))[0]
+    gmapsapikey = json.load(open('menu_read/menu_parse/gmapsapikey.json', 'r'))[0]
 
 
     # In[15]:
@@ -178,7 +178,7 @@ def overall(food, pic_loc,pref):
     # In[21]:
 
 
-    menuitems = json.load(open('menuJSON/final.json'))
+    menuitems = json.load(open('menu_read/menuJSON/final.json'))
     if food:
         menuitems = [x[3:].strip() for x in list(menuitems.keys())]
     menitems = [x.lower() for x in menuitems]
@@ -349,7 +349,7 @@ def overall(food, pic_loc,pref):
     #
     # allfoods = [x.lower() for x in allfoods]
 
-    with open('allfoods.json') as f:
+    with open('/menu_read/allfoods.json') as f:
         allfoods = json.load(f)
 
     ## food preferences by users reviews
@@ -387,7 +387,7 @@ def overall(food, pic_loc,pref):
     #             print('\n')
 
 
-    allmen = pd.DataFrame(json.load(open('menuJSON/final.json')),index=range(2)).T
+    allmen = pd.DataFrame(json.load(open('menu_read/menuJSON/final.json')),index=range(2)).T
     itemratings['price'] = allmen[0].values
 
     min_max_scaler = preprocessing.MinMaxScaler()
@@ -407,9 +407,9 @@ def overall(food, pic_loc,pref):
 food = True
 
 #pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
-pic_loc = 'ocr/menupictures/pic7.jpg'
+pic_loc = 'menu_read/ocr/menupictures/pic7.jpg'
 
-pref = 'preferencesData.json'
+pref = 'menu_read/preferencesData.json'
 
 overall(food, pic_loc, pref)
 

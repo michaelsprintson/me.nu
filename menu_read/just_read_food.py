@@ -133,7 +133,7 @@ def final_dump(menu, pref, dump, dumpsavename):
     menudict = make_fooddict(foods, prices)
     menudict = filter(menudict, pref)
     if dump:
-        with open("menuJSON/" + dumpsavename + '.json', 'w') as cleaned_menu:
+        with open("menu_read/menuJSON/" + dumpsavename + '.json', 'w') as cleaned_menu:
             json.dump(menudict, cleaned_menu)
     return menudict
 
@@ -156,4 +156,4 @@ def final_dump(menu, pref, dump, dumpsavename):
 #     weird_file_name = 'weirdfiletest' + str(i)
 #     detect_text(pic_loc, weird_file_name)
 print(final_dump("menu_read/ocr/menu_tests/final.txt",
-                      "preferencesData.json", False, "weirdpic"))
+                      "menu_read/preferencesData.json", False, "weirdpic"))
