@@ -15,8 +15,8 @@ from sklearn import preprocessing
 import sys
 
 # os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
-# os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
-os.chdir("/Users/michaelsprintson/Documents/GitHub/me.nu/menu_read/")
+os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
+# os.chdir("/Users/michaelsprintson/Documents/GitHub/me.nu/menu_read/")
 
 
 # In[7]:
