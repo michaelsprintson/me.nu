@@ -84,36 +84,39 @@ def first_clean(ocr_menu):
 
 def make_fooddict(foods, prices):
     menu_dict = defaultdict()
-    print (len(foods), len(prices))
+    #print (len(foods), len(prices))
     for foodidx in range(len(foods)):
-        print(foods[foodidx], prices[foodidx])
+        #print(foods[foodidx], prices[foodidx])
         menu_dict[foods[foodidx]] = prices[foodidx]
     return menu_dict
 
 
 def filter(menu_dict, user_pref):
-    pref = open(user_pref, "r")  # load user preferences txt
-    pref_lines = pref.readlines()
-    budget = float(pref_lines[0].strip())
+    pref = json.load(open(user_pref, "r"))
+
+    budget = float(pref['budget'].strip())
     # budget = 100.0
-    eats_meat = bool(pref_lines[1].strip())
-    user_likes = (pref_lines[2].strip().split())
+
+    eats_meat = not pref['diet-veg'] in ['True']
+    user_likes = (pref['diet-exclude'].strip().split())
 
     # filters out dishes based on vegetarian status and budget
-    meats = {"Beef", "Pork", "Duck", "Chicken", "Lamb", "Blood", "Lung",
-             "Meat", "Fish", "Clam", "Tripe", "Prawn", "Rib", "Tilapia"}
+    meats = ["Beef", "Pork", "Duck", "Chicken", "Lamb", "Blood", "Lung",
+             "Meat", "Fish", "Clam", "Tripe", "Prawn", "Rib", "Tilapia"]
     newdict = {}
+    meatcontentbool = {dish:False for dish in menu_dict}
     for dish in menu_dict:
-        item = menu_dict[dish]
         if menu_dict[dish] <= budget:
             if not eats_meat:
                 for meat in meats:
                     if meat in dish:
-                        nomeat = False
-                if nomeat:
-                    newdict[dish] = menu_dict[dish]
+                        meatcontentbool[dish] = True
             else:
                 newdict[dish] = menu_dict[dish]
+    if not eats_meat:
+        kept = [dish for (dish,boool) in meatcontentbool.items() if boool == False]
+        for keptmeal in kept:
+            newdict[keptmeal] = menu_dict[keptmeal]
     return newdict
 
 
@@ -152,5 +155,5 @@ def final_dump(menu, pref, dump, dumpsavename):
 #     pic_loc = 'ocr\menupictures\weirdpic\wpic' + str(i) + '.jpg'
 #     weird_file_name = 'weirdfiletest' + str(i)
 #     detect_text(pic_loc, weird_file_name)
-#     print(final_dump("ocr\menu_tests\weirdfiletest" + str(i) + ".txt",
-#                      "menu_read\pref_sample.txt", True, "weirdpic" + str(i)))
+print(final_dump("ocr/menu_tests/final.txt",
+                      "preferencesData.json", False, "weirdpic"))
