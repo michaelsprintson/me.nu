@@ -403,10 +403,10 @@ def overall(food, pic_loc,pref):
 
 
 def run():
-    food = True
+    food = False
 
-    #pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
-    pic_loc = 'ocr/menupictures/pic7.jpg'
+    pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
+    #pic_loc = 'ocr/menupictures/pic7.jpg'
 
     pref = "pref_sample.txt"
 

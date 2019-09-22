@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a5a2512-17e0-4766-a3f5-f18b98ccb1ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allfoods.json" beforeDir="false" afterPath="$PROJECT_DIR$/allfoods.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu_parse/reviewparse.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/menu_parse/reviewparse.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reviewparse.py" beforeDir="false" afterPath="$PROJECT_DIR$/reviewparse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +17,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/reviewparse.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="399" column="40" selection-start-line="399" selection-start-column="40" selection-end-line="399" selection-end-column="40" />
+                <state relative-caret-position="267">
+                  <caret line="405" column="23" selection-start-line="405" selection-start-column="22" selection-end-line="405" selection-end-column="23" />
                   <folding>
                     <element signature="e#2#21#0" expanded="true" />
-                    <marker date="1569125242752" expanded="true" signature="2:259" ph="..." />
+                    <marker date="1569126354540" expanded="true" signature="2:259" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -220,12 +217,12 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.088794924" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3299363" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.3299363" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3299539" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.37579617" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.37579617" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -301,11 +298,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reviewparse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="399" column="40" selection-start-line="399" selection-start-column="40" selection-end-line="399" selection-end-column="40" />
+        <state relative-caret-position="267">
+          <caret line="405" column="23" selection-start-line="405" selection-start-column="22" selection-end-line="405" selection-end-column="23" />
           <folding>
             <element signature="e#2#21#0" expanded="true" />
-            <marker date="1569125242752" expanded="true" signature="2:259" ph="..." />
+            <marker date="1569126354540" expanded="true" signature="2:259" ph="..." />
           </folding>
         </state>
       </provider>
