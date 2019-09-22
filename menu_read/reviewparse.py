@@ -13,8 +13,10 @@ import os
 import math
 import sys
 
+
 #os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
-os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
+#os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
+os.chdir("/Users/michaelsprintson/Documents/GitHub/me.nu/menu_read/")
 
 
 # In[7]:
@@ -209,42 +211,38 @@ def overall(food, pic_loc,pref):
 
     #print(reviewdf['reviewRating'].head(10))
     #print(reviewdf['reviewRating'].tail(10))
-    tot4plusreviews = len(reviewdf[reviewdf['reviewRating'] >= 4])
 
+    def compute(itor,ref):
+        #total number of 4 plus reviews
+        tot4plusreviews = len(ref[ref['reviewRating'] >= 4])
+        for item in itor:
+            #print(item,'------',end = '')
+            allratings = []
+            fourpluscounter = 0
+            twominuscounter = 0
+            totalrev = len(itor[item][1])
 
-    # In[26]:
+            for rev in itor[item][1]:
+                curstar = ref.iloc[rev]['reviewRating']
+                allratings.append(curstar)
+                if curstar >= 4:
+                    fourpluscounter += 1
+                elif curstar <= 2:
+                    twominuscounter += 1
+            if not totalrev == 0:
+                itor[item][0]['extremerev'] = (fourpluscounter - twominuscounter) / (2 * totalrev)
+            else:
+                itor[item][0]['extremerev'] = 0
+            itor[item][0]['percentageoftotalreviews'] = 8.5 * (fourpluscounter) / tot4plusreviews
 
-
-    #total number of 4 plus reviews
-    for item in menitemstoreviews:
-        #print(item,'------',end = '')
-        allratings = []
-        fourpluscounter = 0
-        twominuscounter = 0
-        totalrev = len(menitemstoreviews[item][1])
-
-        for rev in menitemstoreviews[item][1]:
-            curstar = reviewdf.iloc[rev]['reviewRating']
-            allratings.append(curstar)
-            if curstar >= 4:
-                fourpluscounter += 1
-            elif curstar <= 2:
-                twominuscounter += 1
-        if not totalrev == 0:
-            menitemstoreviews[item][0]['extremerev'] = (fourpluscounter - twominuscounter) / (2 * totalrev)
-        else:
-            menitemstoreviews[item][0]['extremerev'] = 0
-        menitemstoreviews[item][0]['percentageoftotalreviews'] = 8.5 * (fourpluscounter) / tot4plusreviews
-
-        if not len(allratings) == 0:
-            menitemstoreviews[item][0]['avgrev'] = sum(allratings)/(5 * len(allratings))
-            #print('av rating',sum(allratings)/len(allratings))
-        else:
-            menitemstoreviews[item][0]['avgrev'] = 0
-            #print('no reviews')
-
-
-    # In[27]:
+            if not len(allratings) == 0:
+                itor[item][0]['avgrev'] = sum(allratings)/(5 * len(allratings))
+                #print('av rating',sum(allratings)/len(allratings))
+            else:
+                itor[item][0]['avgrev'] = 0
+                #print('no reviews')
+        return itor
+    menitemstoreviews = compute(menitemstoreviews,reviewdf)
 
 
     itemratings = pd.DataFrame(menitemstoreviews).T
@@ -259,7 +257,132 @@ def overall(food, pic_loc,pref):
 
     # In[29]:
 
+    def grabfullreviws(ureviews):
+        fullreviews = []
+        curreview = ''
+        for i in range(len(ureviews)):
+            #print('\n')
+            if not (i == len(ureviews)-1):
+                if not type(ureviews[i]) == str:
+                    #print('not a review',ureviews[i],type(ureviews[i]))
+                    pass
+                elif not type(ureviews[i+1]) == str:
+                    #print('middle of a review',ureviews[i],type(ureviews[i]))
+                    curreview = curreview + ureviews[i]
+                elif type(ureviews[i+1]) == str:
+                    #print('end of a review',ureviews[i],type(ureviews[i]))
+                    curreview = curreview + ureviews[i]
+                    fullreviews.append(curreview)
+                    curreview = ''
+            else:
+                curreview = curreview + ureviews[i]
+                fullreviews.append(curreview)
+        return fullreviews
 
+    userpage = 'https://www.yelp.com/user_details_reviews_self?rec_pagestart=0&userid=2fKJeKlPi9le_ta7DPVW_A'
+    def wikiscrape(link):
+        unextpage = 'something'
+        userreviewdf = pd.DataFrame()
+
+        upath_reviews = '//p[@lang="en"]//node()'
+        upath_nextpage = '//a[@class="u-decoration-none next pagination-links_anchor"]'
+        upath_starrating = '//div[@class="biz-rating__stars"]//div'
+
+        while len(unextpage) > 0:
+
+            userpage = requests.get(userpage, headers = headers)#,proxies={"http": proxy, "https": proxy})
+
+            uparser = html.fromstring(userpage.content)
+
+            ureviews = uparser.xpath(upath_reviews)
+
+            unextpage = uparser.xpath(upath_nextpage)
+
+            if len(unextpage) > 0:
+                print(unextpage)
+                userpage = unextpage[0].get('href')
+            ustarratingpath = uparser.xpath(upath_starrating)
+
+            ureviews = [str(i) if not "Element br" in str(i) else 0 for i in ureviews ]
+
+            ufullreviews = grabfullreviws(ureviews)
+
+            fullstars = [i.get('title') for i in ustarratingpath]
+
+            userreviewdf = pd.concat([userreviewdf,pd.DataFrame(list(zip(fullstars,ufullreviews)))])
+    #userreviewdf = wikiscrape(username)
+    #userreviewdf = userreviewdf.reset_index().drop(['index'],axis = 1)
+
+    userreviewdf = pd.read_json('userreviews')
+
+    userreviewdf.columns = ['reviewRating','description']
+    userreviewdf['reviewRating'] = userreviewdf['reviewRating'].apply(lambda x: int(x[0:1]))
+    reviewdf['description'] = reviewdf['description'].apply(lambda x:x.replace('\n','').replace('-',' ').lower())
+    reviewdf['description'] = reviewdf['description'].apply(lambda x:' '.join([i for i in x.split(" ") if len(i)>2]))
+    translator = str.maketrans(string.punctuation, ' '*len(string.punctuation)) #map punctuation to space
+    reviewdf['description'] = reviewdf['description'].apply(lambda x:x.translate(translator)).apply(lambda x: ' '.join(x.split()))
+
+
+    ## scrape wikipedia for chinese foods (only run once, save results as JSON)
+
+    from bs4 import BeautifulSoup
+
+
+    wikipage = 'https://en.wikipedia.org/wiki/List_of_Chinese_dishes'
+    wikipage = requests.get(wikipage).text
+    wikidf = pd.DataFrame()
+
+    soup = BeautifulSoup(wikipage,features="lxml")
+
+    my_tables = soup.findAll('table',{'class':'wikitable'})
+
+
+    chinesefoods = []
+    for table in my_tables:
+        alla = list(table.findAll('a'))
+        chinesefoods = chinesefoods +[x for x in[alla[i].get('title') for i in range(len(alla))] if type(x) == str]
+
+    # from nltk.corpus import wordnet as wn
+    # allfoods = list(set([w for s in wn.synset('food.n.02').closure(lambda s:s.hyponyms()) for w in s.lemma_names()])) + chinesefoods
+    #
+    # allfoods = [x.lower() for x in allfoods]
+
+    with open('allfoods.json') as f:
+        allfoods = json.load(f)
+
+    ## food preferences by users reviews
+
+    search = lambda x: [food for food in allfoods if food in x]
+
+    userreviewdf['containedFood'] = userreviewdf['description'].apply(search)
+
+    userreviewdf.head()
+
+    foodtoreviewunfiltered = {}
+    for food in allfoods:
+        foodtoreviewunfiltered[food] = [{},list(userreviewdf[userreviewdf['containedFood'].map(lambda d: food in d)].index)]
+
+    foodtoreview = {k:v for (k,v) in foodtoreviewunfiltered.items() if not len(v[1]) == 0}
+
+    userrevscores = compute(foodtoreview,userreviewdf)
+
+    userratings = pd.DataFrame(userrevscores).T
+    userratings.columns = ['ratings','indexes']
+
+    userratings['totalscore'] = userratings['ratings'].apply(lambda x: sum(x.values()))
+
+    userratings['totalscore'].sort_values(ascending = False).head()
+
+    for i in list(itemratings.index):
+        test = i.split(" ")
+        test = [x.lower() for x in test]
+    #     print(i)
+        for j in test:
+            if j in allfoods:
+    #             print ('before',itemratings.loc[i]['totalscore'])
+                itemratings.at[i,'totalscore'] = itemratings.loc[i]['totalscore'] + 0.3 * userratings['totalscore'][test.index(j)]
+    #             print ('after',itemratings.at[i,'totalscore'])
+    #             print('\n')
 
 
     allmen = pd.DataFrame(json.load(open('menuJSON/final.json')),index=range(2)).T
@@ -267,7 +390,7 @@ def overall(food, pic_loc,pref):
 
     print(itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False))
 
-    itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).to_json('ranking.json')
+    itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).T.to_json('ranking.json')
 
 
 def run():
@@ -281,199 +404,3 @@ def run():
     overall(food, pic_loc, pref)
 
 
-# In[ ]:
-
-
-#
-#
-#
-# # # WIP / TESTING
-#
-# # In[30]:
-#
-#
-# # itemratings.loc['water boiled beef']['ratings']
-#
-# # reviewdf[reviewdf['description'].map(lambda d: 'okinawa pearl milk tea' in d)]
-#
-#
-#
-# # reviewdf.iloc[548]['description']
-#
-#
-#
-# # pd.DataFrame(menitemstoreviews).T
-#
-# # reviewdf[reviewdf['author']=='Tristan & Ashley Boyd']
-#
-# # reviewdf.iloc[473]['description']
-#
-#
-#
-#
-#
-#
-#
-# # #reviewdf.to_json('bigmala')
-#
-#
-# # # USER PREFERENCES
-#
-# # ## scrape wikipedia for chinese foods (only run once, save results as JSON)
-#
-# # In[64]:
-#
-#
-# from bs4 import BeautifulSoup
-#
-#
-# # In[65]:
-#
-#
-#
-# wikipage = 'https://en.wikipedia.org/wiki/List_of_Chinese_dishes'
-# wikipage = requests.get(wikipage).text
-# wikidf = pd.DataFrame()
-#
-# soup = BeautifulSoup(wikipage)
-#
-# my_tables = soup.findAll('table',{'class':'wikitable'})
-#
-#
-# # In[518]:
-#
-#
-# chinesefoods = []
-# for table in my_tables:
-#     alla = list(table.findAll('a'))
-#     chinesefoods = chinesefoods +[x for x in[alla[i].get('title') for i in range(len(alla))] if type(x) == str]
-#
-#
-# # In[519]:
-#
-#
-# from nltk.corpus import wordnet as wn
-# allfoods = list(set([w for s in wn.synset('food.n.02').closure(lambda s:s.hyponyms()) for w in s.lemma_names()])) + chinesefoods
-#
-#
-# # In[520]:
-#
-#
-# len(allfoods)
-#
-#
-# # ## food preferences by users reviews
-#
-# # In[69]:
-#
-#
-# search = lambda x: [food for food in allfoods if food in x]
-#
-# #userreviewdf['containedFood='] = userreviewdf['description'].apply(search)
-#
-#
-# # In[ ]:
-#
-#
-#
-#
-#
-# # In[461]:
-#
-#
-# #food = [x.lower() for x in food]
-#
-#
-# # In[ ]:
-#
-#
-#
-#
-#
-# # In[463]:
-#
-#
-# # for i in menuitems:
-# #     test = i.split(" ")
-# #     test = [x.lower() for x in test]
-# #     print(i)
-# #     for j in test:
-# #         if j in food:
-# #             print ('y',j)
-# #
-#
-#
-# # # IMPORT USER REVIEWS
-#
-# # In[34]:
-#
-#
-# def grabfullreviws(ureviews):
-#     fullreviews = []
-#     curreview = ''
-#     for i in range(len(ureviews)):
-#         #print('\n')
-#         if not (i == len(ureviews)-1):
-#             if not type(ureviews[i]) == str:
-#                 #print('not a review',ureviews[i],type(ureviews[i]))
-#                 pass
-#             elif not type(ureviews[i+1]) == str:
-#                 #print('middle of a review',ureviews[i],type(ureviews[i]))
-#                 curreview = curreview + ureviews[i]
-#             elif type(ureviews[i+1]) == str:
-#                 #print('end of a review',ureviews[i],type(ureviews[i]))
-#                 curreview = curreview + ureviews[i]
-#                 fullreviews.append(curreview)
-#                 curreview = ''
-#         else:
-#             curreview = curreview + ureviews[i]
-#             fullreviews.append(curreview)
-#     return fullreviews
-#
-#
-# # In[35]:
-#
-#
-# unextpage = 'something'
-# userpage = 'https://www.yelp.com/user_details_reviews_self?rec_pagestart=0&userid=2fKJeKlPi9le_ta7DPVW_A'
-# userreviewdf = pd.DataFrame()
-#
-# upath_reviews = '//p[@lang="en"]//node()'
-# upath_nextpage = '//a[@class="u-decoration-none next pagination-links_anchor"]'
-# upath_starrating = '//div[@class="biz-rating__stars"]//div'
-#
-# while len(unextpage) > 0:
-#
-#     userpage = requests.get(userpage, headers = headers)#,proxies={"http": proxy, "https": proxy})
-#
-#     uparser = html.fromstring(userpage.content)
-#
-#     ureviews = uparser.xpath(upath_reviews)
-#
-#     unextpage = uparser.xpath(upath_nextpage)
-#
-#     if len(unextpage) > 0:
-#         print(unextpage)
-#         userpage = unextpage[0].get('href')
-#     ustarratingpath = uparser.xpath(upath_starrating)
-#
-#     ureviews = [str(i) if not "Element br" in str(i) else 0 for i in ureviews ]
-#
-#     ufullreviews = grabfullreviws(ureviews)
-#
-#     fullstars = [i.get('title') for i in ustarratingpath]
-#
-#     userreviewdf = pd.concat([userreviewdf,pd.DataFrame(list(zip(fullstars,ufullreviews)))])
-#
-#
-# # In[37]:
-#
-#
-# userreviewdf.columns = ['rating','description']
-#
-#
-# # In[38]:
-#
-#
-# userreviewdf.head()
-#
