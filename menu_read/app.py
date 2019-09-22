@@ -102,6 +102,20 @@ def suggested_menu():
     # Get preferences
     pref = "preferencesData.json"
 
+    if food:
+        menu_data = json.load(open('rankingMala.json'))
+    else:
+        menu_data = json.load(open('rankingSharetea.json'))
+    top_items = []
+    other_items = []
+    i = 0
+    for menu_item in menu_data:
+        if i < 3:
+            top_items.append(menu_item)
+        elif len(other_items) < 7:
+            other_items.append(menu_item)
+        i += 1
+    return render_template('suggestedMenu.html', topItems=top_items, otherItems=other_items, menuData=menu_data)
     # Analyze menu, catch OCR error
     try:
         reviewparse.overall(food, pic_loc, pref)

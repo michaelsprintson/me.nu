@@ -88,6 +88,7 @@ def first_clean(ocr_menu):
 
 def make_fooddict(foods, prices):
     menu_dict = defaultdict()
+    print('here')
     print (len(foods), len(prices))
     for foodidx in range(len(foods)):
         print (foods[foodidx])
