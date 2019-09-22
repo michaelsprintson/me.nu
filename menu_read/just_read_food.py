@@ -155,5 +155,5 @@ def final_dump(menu, pref, dump, dumpsavename):
 #     pic_loc = 'ocr\menupictures\weirdpic\wpic' + str(i) + '.jpg'
 #     weird_file_name = 'weirdfiletest' + str(i)
 #     detect_text(pic_loc, weird_file_name)
-print(final_dump("ocr/menu_tests/final.txt",
+print(final_dump("menu_read/ocr/menu_tests/final.txt",
                       "preferencesData.json", False, "weirdpic"))
