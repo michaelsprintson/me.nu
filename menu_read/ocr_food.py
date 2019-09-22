@@ -6,7 +6,7 @@ import re
 from google.cloud import vision
 
 # set environment variable for google api credential
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "apikey.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "menu_read/apikey.json"
 
 """
 This file reads menu OCR results from myfile.txt and dumps json dictionary of menu item to price
