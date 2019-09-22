@@ -11,6 +11,7 @@ from itertools import cycle
 import string
 import os
 import math
+from sklearn import preprocessing
 import sys
 
 #os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
@@ -385,6 +386,14 @@ def overall(food, pic_loc,pref):
 
     allmen = pd.DataFrame(json.load(open('menuJSON/final.json')),index=range(2)).T
     itemratings['price'] = allmen[0].values
+
+    min_max_scaler = preprocessing.MinMaxScaler()
+
+    x = itemratings[['totalscore']].values.astype(float)
+    # Create an object to transform the data to fit minmax processor
+    itemrating_scaled = min_max_scaler.fit_transform(x)
+
+    itemratings['totalscore'] = [math.ceil(10* x[0]) for x in itemrating_scaled]
 
     print(itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False))
 
