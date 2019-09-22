@@ -1,29 +1,28 @@
-A 
-H1 
-Hous 
-Peecial 
-To Notch Pot the Outlaws
-31.95 
-H2 Sauerkraut Fish and Lamb Pot
-H3 Country Style Blood Curd Dish
-H4 Devourable Beef Pot
-H5 Spicy and Crispy Chicken
-H6 Konjac Duck Stew
-H7 Konjac Beef
-H8 Lotus Tofu
-H9 Three Pepper Beaten Duck
-H10 Tea Smoked Duck
-H11 Four Joy Lion Head
-H12 Fragrant Ribs
-24.95 
-14.95 
-13.95 
-12.95 
-12.95 
-12.95 
-11.95 
-13.95 
-13.95 
-12.95 
-12.95 
+Tea 
+Classic Milk Tea
+Honey Milk Tea
+Ginger Milk Tea
+Okinawa Pearl Milk Tea Brown
+Hokkaido Pearl Milk Tea
+Classic Coffee
+Classic Pearl Milk Tea
+Mango Green Milk Tea
+Taro Pearl Milk Tea
+Matcha Red Bean Milk Tea
+QQ Happy Family Milk Tea
+Ice Cream Black/Green Tea
+Coffee Jelly Milk Tea
+3.50 
+3.50 
+3.50 
+4.00 
+4.00 
+3.50 
+4.00 
+4.00 
+4.00 
+4.00 
+4.00 
+3.75 
+3.75 
  
