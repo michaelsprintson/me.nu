@@ -87,22 +87,29 @@ def loading():
 def suggested_menu():
     # Get food T/F
     foodChoice = open("foodChoice.txt", "r")
-    food = bool(foodChoice.readline())
+    food = foodChoice.readline() in ['True']
 
-    # Get menu pic
+    # Get image
+    pic_loc = 'static/webcam.jpg'
 
-    # Get user preferences
-
-    # food = True
-    pic_loc = 'ocr/menupictures/pic7.jpg'
-    pref = "pref_sample.txt"
+    # Get preferences
+    pref = "preferencesData.json"
 
     # Analyze menu
     reviewparse.overall(food, pic_loc, pref)
 
-    # Pass information to results page
+    # Filter top results
     menu_data = json.load(open('ranking.json'))
-    return render_template('suggestedMenu.html', menuData=menu_data)
+    top_items = []
+    other_items = []
+    i = 0
+    for menu_item in menu_data:
+        if i < 3:
+            top_items.append(menu_item)
+        elif len(other_items) < 7:
+            other_items.append(menu_item)
+        i += 1
+    return render_template('suggestedMenu.html', topItems=top_items, otherItems=other_items, menuData=menu_data)
 
 
 @app.route('/foo')

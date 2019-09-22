@@ -24,32 +24,22 @@
                     <header class="major">
                         <h2>Suggested Menu</h2>
                     </header>
-                    <div class="posts">
-                        {% for menuItem in menuData %}
-                           <p>{{ loop.index }}. {{ menuItem.capitalize() }}, price: ${{ menuData[menuItem]['price'] }}, score: {{ menuData[menuItem]['totalscore'] }}</p>
-                        {% endfor %}
-<!--                        <article>-->
-<!--                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>-->
-<!--                            <h3>Mala Sichuan Bistro</h3>-->
-<!--                            <ul class="actions">-->
-<!--                                <li><a href="/takePic" class="button">Select</a></li>-->
-<!--                            </ul>-->
-<!--                        </article>-->
-<!--                        <article>-->
-<!--                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>-->
-<!--                            <h3>East West Tea</h3>-->
-<!--                            <ul class="actions">-->
-<!--                                <li><a href="#" class="button">Select</a></li>-->
-<!--                            </ul>-->
-<!--                        </article>-->
-<!--                        <article>-->
-<!--                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>-->
-<!--                            <h3>JINYA Ramen</h3>-->
-<!--                            <ul class="actions">-->
-<!--                                <li><a href="#" class="button">Select</a></li>-->
-<!--                            </ul>-->
-<!--                        </article>-->
-                    </div>
+
+                    <header class="major">
+                        <h3>Top Choices!</h3>
+                    </header>
+                    {% for itemName in topItems %}
+                        <h4>{{ loop.index }}. {{ itemName.capitalize() }}</h4>
+                        <p>Price: ${{ menuData[itemName]['price'] }} | Score: {{ menuData[itemName]['totalscore'] }}</p>
+                    {% endfor %}
+
+                    <header class="major">
+                        <h3>Other Great Dishes!</h3>
+                    </header>
+                    {% for itemName in otherItems %}
+                        <h4>{{ loop.index + 3 }}. {{ itemName.capitalize() }}</h4>
+                        <p>Price: ${{ menuData[itemName]['price'] }} | Score: {{ menuData[itemName]['totalscore'] }}</p>
+                    {% endfor %}
                 </section>
             </div>
         </div>
