@@ -3,7 +3,7 @@ django
 pandas
 lxml
 google
---upgrade google-cloud-vision
+install --upgrade google-cloud-vision
 requests
 itertools
 sklearn
