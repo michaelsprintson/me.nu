@@ -13,7 +13,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
-    # reviewparse.run()
     if request.method == 'POST':
         json.dump(request.form, open('preferencesData.json', 'w'))
     return render_template('index.html')
@@ -85,6 +84,7 @@ def loading():
 
 @app.route('/suggestedMenu')
 def suggested_menu():
+    reviewparse.run()
     return render_template('suggestedMenu.html')
 
 
