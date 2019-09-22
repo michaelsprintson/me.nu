@@ -180,11 +180,11 @@ def final_dump(menu, pref, dump, dumpsavename):
 
 
 
-print (final_dump(r"ocr\menu_tests\weirdfiletest18.txt", "menu_read\pref_sample.txt", False, "as"))
-# create dictionary
-d = load_words()
+# print (final_dump(r"ocr\menu_tests\weirdfiletest18.txt", "menu_read\pref_sample.txt", False, "as"))
+# # create dictionary
+# d = load_words()
 
-pref_location = "menu_read\\pref_sample.txt"
+# pref_location = "menu_read\\pref_sample.txt"
 
 # # run test with normal pictures
 # pic_loc = 'ocr\\menupictures\\othermenu\\othermenu7.jpg'
