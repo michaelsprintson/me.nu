@@ -24,10 +24,18 @@
                     <header class="major">
                         <h2>Suggested Menu</h2>
                     </header>
+
+                    {% for menuItem in menuData %}
+                        <header class="major">
+                            <h3>Top Choices!</h3>
+                        </header>
+                        <h4>{{ loop.index }}. {{ menuItem.capitalize() }}</h4>
+                        <p>price: ${{ menuData[menuItem]['price'] }}, score: {{ menuData[menuItem]['totalscore'] }}</p>
+                    {% endfor %}
+
                     <div class="posts">
-                        {% for menuItem in menuData %}
-                           <p>{{ loop.index }}. {{ menuItem.capitalize() }}, price: ${{ menuData[menuItem]['price'] }}, score: {{ menuData[menuItem]['totalscore'] }}</p>
-                        {% endfor %}
+
+
 <!--                        <article>-->
 <!--                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>-->
 <!--                            <h3>Mala Sichuan Bistro</h3>-->

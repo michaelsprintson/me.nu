@@ -100,9 +100,18 @@ def suggested_menu():
     # Analyze menu
     reviewparse.overall(food, pic_loc, pref)
 
-    # Pass information to results page
+    # Filter top results
     menu_data = json.load(open('ranking.json'))
-    return render_template('suggestedMenu.html', menuData=menu_data)
+    top_items = []
+    other_items = []
+    i = 0
+    for menu_item in menu_data:
+        if i < 3:
+            top_items.append(menu_item)
+        else:
+            other_items.append(menu_item)
+        i += 1
+    return render_template('suggestedMenu.html', topItems=top_items, otherItems=other_items, menuData=menu_data)
 
 
 @app.route('/foo')
