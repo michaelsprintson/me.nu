@@ -187,6 +187,7 @@ def overall(food, pic_loc,pref):
         return fullreviews
 
     userpage = 'https://www.yelp.com/user_details_reviews_self?rec_pagestart=0&userid=2fKJeKlPi9le_ta7DPVW_A'
+    
     def userscrape(link): 
 
         #this functions grab all reviews a user has ever submitted, which will be used to determine how likely the user
