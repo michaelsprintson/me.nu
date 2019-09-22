@@ -14,7 +14,8 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        json.dump(request.form, open('preferencesData.json', 'w'))
+        if request.form['budget'].isdigit():
+            json.dump(request.form, open('preferencesData.json', 'w'))
     return render_template('index.html')
 
 
@@ -84,17 +85,33 @@ def loading():
 
 @app.route('/suggestedMenu')
 def suggested_menu():
-    reviewparse.run()
+    # Get food T/F
+    foodChoice = open("foodChoice.txt", "r")
+    food = foodChoice.readline() in ['True']
+
+    # Get image
+    pic_loc = 'static/webcam.jpg'
+
+    # Get preferences
+    pref = "preferencesData.json"
+
+    # Analyze menu
+    reviewparse.overall(food, pic_loc, pref)
+
+    # Filter top results
     menu_data = json.load(open('ranking.json'))
-    return render_template('suggestedMenu.html', menuData=menu_data)
-
-
-@app.route('/foo')
-def foo():
-    test = 'asdfasdf'
-    return render_template('foo.html', content=test)
+    top_items = []
+    other_items = []
+    i = 0
+    for menu_item in menu_data:
+        if i < 3:
+            top_items.append(menu_item)
+        elif len(other_items) < 7:
+            other_items.append(menu_item)
+        i += 1
+    return render_template('suggestedMenu.html', topItems=top_items, otherItems=other_items, menuData=menu_data)
 
 
 if __name__ == "__main__":
     app.secret_key = 'super secret key'
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=80)

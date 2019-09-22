@@ -1,0 +1,10 @@
+flask
+django
+pandas
+lxml
+google
+--upgrade google-cloud-vision
+requests
+itertools
+sklearn
+bs4
