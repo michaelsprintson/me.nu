@@ -12,9 +12,9 @@
 4. Install pandas, requests, lxml, Flask, and other necessary packages on the project interpreter if using an IDE, 
 or install dependencies with <code>npm install</code>.
 
-### How to run
+## How to run
 Install dependencies with ```pip install -r requirement.txt``` and then start the server with ```flask run```
 
 ## Team
-Me.nu was created by Timothy Goh (tGoh98), Michael Sprintson (michaelsprintson), Seung Hun Jang (sj43), and Colin King (colinbking) for HackRice9
+Me.nu was created by Timothy Goh (tGoh98), Michael Sprintson (michaelsprintson), Seung Hun Jang (sj43), and Colin King (colinbking) for HackRice9. Read more about it in the [Devpost](https://devpost.com/software/me-nu).
 
