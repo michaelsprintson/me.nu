@@ -1,7 +1,7 @@
 import os
 import json
 from flask import Flask, flash, render_template, request, redirect, url_for, send_from_directory
-import reviewparse
+import menu_read.reviewparse as rp
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = './static'
@@ -17,7 +17,7 @@ def index():
     submission_message = "Preferences saved!"
     if request.method == 'POST':
         if request.form['budget'].isdigit():
-            json.dump(request.form, open('preferencesData.json', 'w'))
+            json.dump(request.form, open('menu_read/preferencesData.json', 'w'))
         else:
             submission_message = "Invalid input, please try again"
         did_update = True
@@ -33,7 +33,7 @@ def choose_menu():
 
 @app.route('/takePicMala/<pic_error>')
 def take_pic_mala(pic_error):
-    text_file = open("foodChoice.txt", "w")
+    text_file = open("menu_read/foodChoice.txt", "w")
     text_file.write("True")
     text_file.close()
     return render_template('takePic.html', pic_error=pic_error)
@@ -41,7 +41,7 @@ def take_pic_mala(pic_error):
 
 @app.route('/takePicSharetea/<pic_error>')
 def take_pic_sharetea(pic_error):
-    text_file = open("foodChoice.txt", "w")
+    text_file = open("menu_read/foodChoice.txt", "w")
     text_file.write("False")
     text_file.close()
     return render_template('takePic.html', pic_error=pic_error)
@@ -93,20 +93,20 @@ def loading():
 @app.route('/suggestedMenu')
 def suggested_menu():
     # Get food T/F
-    foodChoice = open("foodChoice.txt", "r")
+    foodChoice = open("menu_read/foodChoice.txt", "r")
     food = foodChoice.readline() in ['True']
 
     # Get image
     pic_loc = 'static/webcam.jpg'
 
     # Get preferences
-    pref = "preferencesData.json"
+    pref = "menu_read/preferencesData.json"
 
     # Analyze menu, catch OCR error
     try:
         reviewparse.overall(food, pic_loc, pref)
         # Filter top results
-        menu_data = json.load(open('ranking.json'))
+        menu_data = json.load(open('menu_read/ranking.json'))
         top_items = []
         other_items = []
         i = 0
@@ -127,4 +127,5 @@ def suggested_menu():
 
 if __name__ == "__main__":
     app.secret_key = 'super secret key'
-    app.run(host='0.0.0.0')
+    port = int(os.environ.get("PORT", 8080))
+    app.run(debug=True, host='0,0,0,0', port=port)

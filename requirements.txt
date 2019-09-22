@@ -1,10 +1,12 @@
+gunicorn
 flask
 django
 pandas
 lxml
 google
---upgrade google-cloud-vision
+googlemaps
 requests
-itertools
 sklearn
 bs4
+#itertools
+google-cloud-vision

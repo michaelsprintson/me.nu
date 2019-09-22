@@ -16,8 +16,11 @@ import sys
 import googlemaps
 from datetime import datetime
 
-# os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
-os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
+
+
+#os.chdir("/Users/shjan/Coding/me.nu/")
+# os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
+
 # os.chdir("/Users/michaelsprintson/Documents/GitHub/me.nu/menu_read/")
 
 
@@ -27,24 +30,20 @@ def overall(food, pic_loc,pref):
 
     if food:
         webpage = 'https://www.yelp.com/biz/mala-sichuan-bistro-houston-3'
-        import ocr_food as ocr
-        import just_read_food as jr
+        from menu_read import ocr_food as ocr
+        from menu_read import just_read_food as jr
         pid = 'ChIJNc4K5cTCQIYRe9OyIN7DcGE'
     else:
         webpage = 'https://www.yelp.com/biz/sharetea-houston-2'
-        import ocr_tea as ocr
-        import just_read_tea as jr
+        from menu_read import ocr_tea as ocr
+        from menu_read import just_read_tea as jr
         pid = 'ChIJjfzjCM_CQIYRPA546CYaE4A'
 
     test_file_name = 'final' #name of the file passed between functions 
 
     ocr.detect_text(pic_loc, test_file_name) #output raw results of ocr and save them to json
 
-    jr.final_dump("ocr/menu_tests/final.txt", pref, True, "final") #output processed results of ocr, with preferences taken into account
-
-    
-    #GRAB YELP REVIEWS FOR A RESTERAUNT
-
+    jr.final_dump("menu_read/ocr/menu_tests/final.txt", pref, True, "final")
 
     reviews_df=pd.DataFrame() #create an empty dataframe to grab reviews from
 
@@ -56,9 +55,9 @@ def overall(food, pic_loc,pref):
 
 
     if food:
-        reviewdf = pd.read_json('menu_parse/bigmala') #use cached results for mala and sharetea (memoization / cut down processing time)
+        reviewdf = pd.read_json('menu_read/menu_parse/bigmala')
     elif not food:
-        reviewdf = pd.read_json('menu_parse/sharetea')
+        reviewdf = pd.read_json('menu_read/menu_parse/sharetea')
         s = lambda x: list(x.values())[0]
         reviewdf['reviewRating'] = reviewdf['reviewRating'].apply(s)
     else:
@@ -87,7 +86,8 @@ def overall(food, pic_loc,pref):
 
     #IMPORT GOOGLE REVIEWS
 
-    gmapsapikey = json.load(open('menu_parse/gmapsapikey.json', 'r'))[0]
+    gmapsapikey = json.load(open('menu_read/menu_parse/gmapsapikey.json', 'r'))[0]
+
     url = f'https://maps.googleapis.com/maps/api/place/details/json?key={gmapsapikey}&place_id={pid}&fields=name,review'
     response = requests.get(url, headers=headers)
     
@@ -111,7 +111,7 @@ def overall(food, pic_loc,pref):
 
     # GRAB MENU ITEMS
 
-    menuitems = json.load(open('menuJSON/final.json'))
+    menuitems = json.load(open('menu_read/menuJSON/final.json'))
     if food:
         menuitems = [x[3:].strip() for x in list(menuitems.keys())]
     menitems = [x.lower() for x in menuitems]
@@ -223,8 +223,7 @@ def overall(food, pic_loc,pref):
             userreviewdf = pd.concat([userreviewdf,pd.DataFrame(list(zip(fullstars,ufullreviews)))])
     #userreviewdf = userscrape(userpage)
 
-    userreviewdf = pd.read_json('userreviews') #grabs cached reviews for our user for performance purposes. Uncomment line
-                                               #above to perform the scraping if interested.
+    userreviewdf = pd.read_json('menu_read/userreviews')
 
     userreviewdf.columns = ['reviewRating','description'] #formatting of reviews
     userreviewdf['reviewRating'] = userreviewdf['reviewRating'].apply(lambda x: int(x[0:1]))
@@ -252,11 +251,9 @@ def overall(food, pic_loc,pref):
         alla = list(table.findAll('a'))
         chinesefoods = chinesefoods +[x for x in[alla[i].get('title') for i in range(len(alla))] if type(x) == str]
 
-
-    with open('allfoods.json') as f: #grab cached list of very common foods from nltk.food.n.o2 and the results of the scrape
+    with open('menu_read/allfoods.json') as f:
         allfoods = json.load(f)
 
-    
 
     # find foods in user's reviews and use that to determine which of the menu items is more appealing to that user
 
@@ -285,24 +282,22 @@ def overall(food, pic_loc,pref):
             if j in allfoods:
                 itemratings.at[i,'totalscore'] = itemratings.loc[i]['totalscore'] + 0.3 * userratings['totalscore'][test.index(j)]    #             print ('after',itemratings.at[i,'totalscore'])
 
-
-
-    allmen = pd.DataFrame(json.load(open('menuJSON/final.json')),index=range(2)).T #grab results of the OCR to reattach pricing
+    allmen = pd.DataFrame(json.load(open('menu_read/menuJSON/final.json')),index=range(2)).T
     itemratings['price'] = allmen[0].values
+
     min_max_scaler = preprocessing.MinMaxScaler() 
     x = itemratings[['totalscore']].values.astype(float) #processing to scale scores between 0 and 10 for a ranking system
     itemrating_scaled = min_max_scaler.fit_transform(x)
     itemratings['totalscore'] = [math.ceil(10* x[0]) for x in itemrating_scaled]
     itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).T.to_json('ranking.json') #send results to JSON
 
-
-def run(): #quick testing function with examples. use first picloc with food False and second with food True.
+def run():
     food = True
 
     #pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
-    pic_loc = 'ocr/menupictures/pic7.jpg'
+    pic_loc = 'menu_read/ocr/menupictures/pic7.jpg'
 
-    pref = 'preferencesData.json'
+    pref = 'menu_read/preferencesData.json'
 
     overall(food, pic_loc, pref)
 

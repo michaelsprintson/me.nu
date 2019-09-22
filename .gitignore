@@ -1,5 +1,5 @@
 /venv/
 /env/
 /menu_read/venv/
-menu_read/menu_parse/gmapsapikey.json
-menu_read/apikey.json
+#enu_read/menu_parse/gmapsapikey.json
+#menu_read/apikey.json
