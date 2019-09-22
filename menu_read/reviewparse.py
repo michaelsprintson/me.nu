@@ -12,12 +12,8 @@ import string
 import os
 import math
 import sys
-# In[2]:
 
-
-os.chdir("/Users/michaelsprintson/Documents/GitHub/me.nu/menu_read/")
-
-
+os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
 
 
 # In[7]:
@@ -270,17 +266,18 @@ def overall(food, pic_loc,pref):
 
     print(itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False))
 
-    itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).to_json('ranking')
+    itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).to_json('ranking.json')
 
-# food = True
-#
-# #pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
-# pic_loc = 'ocr/menupictures/pic7.jpg'
-#
-#
-# pref = "pref_sample.txt"
-#
-# overall(food, pic_loc,pref)
+
+def run():
+    food = True
+
+    #pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
+    pic_loc = 'ocr/menupictures/pic7.jpg'
+
+    pref = "pref_sample.txt"
+
+    overall(food, pic_loc, pref)
 
 
 # In[ ]:

@@ -17,7 +17,7 @@ This file reads menu OCR results from myfile.txt and dumps json dictionary of me
 
 
 def load_words():
-    with open(r"ocr\words_alpha.txt") as word_file:
+    with open(r"ocr/wa.txt") as word_file:
         valid_words = set(word_file.read().split())
     return valid_words
 
@@ -25,7 +25,7 @@ def load_words():
 def detect_text(path, savepath):
     """Detects text in the file."""
 
-    file1 = io.open("ocr\\menu_tests\\" + savepath +
+    file1 = io.open("ocr/menu_tests/" + savepath +
                     ".txt", "w", encoding="utf-8")
     client = vision.ImageAnnotatorClient()
 
@@ -173,18 +173,18 @@ def final_dump(menu, pref, dump, dumpsavename):
     menudict = make_fooddict(foods, prices)
     menudict = filter(menudict, pref)
     if dump:
-        with open("menu_read\\menuJSON\\" + dumpsavename + '.json', 'w') as cleaned_menu:
+        with open("menu_read/menuJSON/" + dumpsavename + '.json', 'w') as cleaned_menu:
             json.dump(menudict, cleaned_menu)
     return menudict
 
 
 
 
-print (final_dump(r"ocr\menu_tests\weirdfiletest18.txt", "menu_read\pref_sample.txt", False, "as"))
+print (final_dump(r"ocr/menu_tests/weirdfiletest18.txt", "pref_sample.txt", False, "as"))
 # create dictionary
 d = load_words()
 
-pref_location = "menu_read\\pref_sample.txt"
+pref_location = "menu_read/pref_sample.txt"
 
 # # run test with normal pictures
 # pic_loc = 'ocr\\menupictures\\othermenu\\othermenu7.jpg'
