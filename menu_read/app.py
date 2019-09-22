@@ -112,12 +112,6 @@ def suggested_menu():
     return render_template('suggestedMenu.html', topItems=top_items, otherItems=other_items, menuData=menu_data)
 
 
-@app.route('/foo')
-def foo():
-    test = 'asdfasdf'
-    return render_template('foo.html', content=test)
-
-
 if __name__ == "__main__":
     app.secret_key = 'super secret key'
     app.run(debug=True, host='0.0.0.0', port=80)
