@@ -3,6 +3,7 @@ django
 pandas
 lxml
 google
+googlemaps
 requests
 sklearn
 bs4
