@@ -143,8 +143,8 @@ def final_dump(menu, pref, dump, dumpsavename):
 
 #os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
 
-print(final_dump("ocr/menu_tests/shareteanocolor.txt", "pref_sample.txt", True, "shareteanocolor"))
-
+# print(final_dump("ocr/menu_tests/shareteanocolor.txt", "pref_sample.txt", True, "shareteanocolor"))
+#
 
 
 # create dictionary

@@ -19,23 +19,17 @@ os.chdir("/Users/michaelsprintson/Documents/GitHub/me.nu/menu_read/")
 
 
 
-food = True
 
-pic_loc = 'ocr/menupictures/pic7.jpg'
-
-pref = "pref_sample.txt"
 # In[7]:
 def overall(food, pic_loc,pref):
 
     if food:
-        respage = 'https://www.yelp.com/biz/mala-sichuan-bistro-houston-3'
-        switch = 'food'
+        webpage = 'https://www.yelp.com/biz/mala-sichuan-bistro-houston-3'
         import ocr_food as ocr
         import just_read_food as jr
         pid = 'ChIJNc4K5cTCQIYRe9OyIN7DcGE'
     else:
-        respage = 'https://www.yelp.com/biz/sharetea-houston-2'
-        switch = 'tea'
+        webpage = 'https://www.yelp.com/biz/sharetea-houston-2'
         import ocr_tea as ocr
         import just_read_tea as jr
         pid = 'ChIJjfzjCM_CQIYRPA546CYaE4A'
@@ -75,7 +69,6 @@ def overall(food, pic_loc,pref):
     reviews_df=pd.DataFrame()
 
     user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Safari/605.1.15'
-    webpage = ''
     nextpage = 'something'
     xpath_reviews = '//script[@type="application/ld+json"]/text()'
     xpath_nextpage = '//link[@rel="next"]'
@@ -89,6 +82,8 @@ def overall(food, pic_loc,pref):
         reviewdf = pd.read_json('menu_parse/bigmala')
     elif not food:
         reviewdf = pd.read_json('menu_parse/sharetea')
+        s = lambda x: list(x.values())[0]
+        reviewdf['reviewRating'] = reviewdf['reviewRating'].apply(s)
     else:
         reviewdf = pd.DataFrame()
 
@@ -215,7 +210,8 @@ def overall(food, pic_loc,pref):
 
     # In[25]:
 
-
+    #print(reviewdf['reviewRating'].head(10))
+    #print(reviewdf['reviewRating'].tail(10))
     tot4plusreviews = len(reviewdf[reviewdf['reviewRating'] >= 4])
 
 
@@ -272,10 +268,19 @@ def overall(food, pic_loc,pref):
     allmen = pd.DataFrame(json.load(open('menuJSON/final.json')),index=range(2)).T
     itemratings['price'] = allmen[0].values
 
+    print(itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False))
+
     itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).to_json('ranking')
 
-
-overall(food, pic_loc,pref)
+# food = True
+#
+# #pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
+# pic_loc = 'ocr/menupictures/pic7.jpg'
+#
+#
+# pref = "pref_sample.txt"
+#
+# overall(food, pic_loc,pref)
 
 
 # In[ ]:
