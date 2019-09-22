@@ -26,5 +26,5 @@ run app.py
 * Me.nu was made by Timothy Goh, Michael Sprintson, Seung Hun Jang, and Colin King
 
 # Menu Item Rating Algorithm 
-This algorithm is used by our program to rate each dish from the menu input. It factors in the average rating, a correction factor for other reviewers' perceptions of the dish as positive or negative, as well as the tendency of better items to typically have more reviews overall. 
+We wrote this algorithm for our program to rate each dish from the menu input. It factors in the average rating, a correction factor for other reviewers' perceptions of the dish as positive or negative, as well as the tendency of better items to typically have more reviews overall. 
 ![Menu Item Rating Algorithm](https://github.com/michaelsprintson/me.nu/blob/master/hr9%20equation.PNG)
