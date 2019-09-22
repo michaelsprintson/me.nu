@@ -15,9 +15,9 @@ from sklearn import preprocessing
 import sys
 
 
-#os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
-os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
-# os.chdir("/Users/michaelsprintson/Documents/GitHub/me.nu/menu_read/")
+# os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
+# os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
+os.chdir("/Users/michaelsprintson/Documents/GitHub/me.nu/menu_read/")
 
 
 # In[7]:
@@ -111,7 +111,6 @@ def overall(food, pic_loc,pref):
 
     # ## IMPORT GOOGLE REVIEWS
 
-    # #### todo: make place id google maps api modular through api call
 
     # In[13]:
 
@@ -172,6 +171,8 @@ def overall(food, pic_loc,pref):
     reviewdf['description'] = reviewdf['description'].apply(lambda x:x.translate(translator)).apply(lambda x: ' '.join(x.split()))
 
 
+    print(reviewdf.head())
+
     # # GRAB MENU ITEMS
 
     # In[21]:
@@ -185,12 +186,9 @@ def overall(food, pic_loc,pref):
 
     # ## RANKING MENU ITEMS
 
+    print(menitems)
     # ### sanity check of menu items
 
-    # In[22]:
-
-
-    menitems
 
 
     # In[23]:
@@ -247,6 +245,9 @@ def overall(food, pic_loc,pref):
 
 
     itemratings = pd.DataFrame(menitemstoreviews).T
+
+    #print(itemratings)
+
     itemratings.columns = ['ratings','indexes']
 
 
@@ -402,14 +403,14 @@ def overall(food, pic_loc,pref):
     itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).T.to_json('ranking.json')
 
 
-def run():
-    food = False
+# def run():
+food = True
 
-    pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
-    #pic_loc = 'ocr/menupictures/pic7.jpg'
+#pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
+pic_loc = 'ocr/menupictures/pic7.jpg'
 
-    pref = "pref_sample.txt"
+pref = 'preferencesData.json'
 
-    overall(food, pic_loc, pref)
+overall(food, pic_loc, pref)
 
 

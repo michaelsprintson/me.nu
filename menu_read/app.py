@@ -87,15 +87,15 @@ def loading():
 def suggested_menu():
     # Get food T/F
     foodChoice = open("foodChoice.txt", "r")
-    food = bool(foodChoice.readline())
+    food = foodChoice.readline() in ['True']
 
     # Get menu pic
 
     # Get user preferences
 
     # food = True
-    pic_loc = 'ocr/menupictures/pic7.jpg'
-    pref = "pref_sample.txt"
+    pic_loc = 'static/webcam.jpg'
+    pref = "preferencesData.json"
 
     # Analyze menu
     reviewparse.overall(food, pic_loc, pref)
