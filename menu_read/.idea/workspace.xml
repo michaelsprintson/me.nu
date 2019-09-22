@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a5a2512-17e0-4766-a3f5-f18b98ccb1ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/just_read_tea.py" beforeDir="false" afterPath="$PROJECT_DIR$/just_read_tea.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocr_tea.py" beforeDir="false" afterPath="$PROJECT_DIR$/ocr_tea.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_parse/.ipynb_checkpoints/reviewparse-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/menu_parse/.ipynb_checkpoints/reviewparse-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_parse/reviewparse.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/menu_parse/reviewparse.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ranking" beforeDir="false" afterPath="$PROJECT_DIR$/ranking" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reviewparse.py" beforeDir="false" afterPath="$PROJECT_DIR$/reviewparse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,17 +15,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.6761566">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/reviewparse.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="123">
-                  <caret line="274" selection-start-line="274" selection-start-column="2" selection-end-line="282" selection-end-column="29" />
+                <state relative-caret-position="278">
+                  <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
                   <folding>
                     <element signature="e#2#21#0" expanded="true" />
-                    <marker date="1569111462809" expanded="false" signature="2:233" ph="..." />
+                    <marker date="1569121649573" expanded="false" signature="2:233" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -246,10 +246,10 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1600" height="1177" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18682711" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.088794924" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -257,7 +257,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3299539" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.6175115" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.37579617" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -333,11 +333,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reviewparse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="274" selection-start-line="274" selection-start-column="2" selection-end-line="282" selection-end-column="29" />
+        <state relative-caret-position="278">
+          <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
           <folding>
             <element signature="e#2#21#0" expanded="true" />
-            <marker date="1569111462809" expanded="false" signature="2:233" ph="..." />
+            <marker date="1569121649573" expanded="false" signature="2:233" ph="..." />
           </folding>
         </state>
       </provider>

@@ -14,6 +14,8 @@ This file reads menu OCR results from myfile.txt and dumps json dictionary of me
 """
 
 
+
+
 def load_words():
     with open(r"ocr/wa.txt") as word_file:
         valid_words = set(word_file.read().split())
@@ -176,25 +178,8 @@ def final_dump(menu, pref, dump, dumpsavename):
     return menudict
 
 
+# print (final_dump(r"ocr\menu_tests\weirdfiletest18.txt", "menu_read\pref_sample.txt", False, "as"))
+# # create dictionary
+# d = load_words()
 
-
-print (final_dump(r"ocr/menu_tests/weirdfiletest18.txt", "pref_sample.txt", False, "as"))
-# create dictionary
-d = load_words()
-
-pref_location = "menu_read/pref_sample.txt"
-
-# # run test with normal pictures
-# pic_loc = 'ocr\\menupictures\\othermenu\\othermenu7.jpg'
-# test_file_name = 'othermenutest7'
-# detect_text(pic_loc, test_file_name)
-# print(final_dump('ocr\\menu_tests\\' + test_file_name + '.txt', pref_location, True, test_file_name))
-
-# run test with weird pictures
-
-# for i in range(2, 5):
-#     pic_loc = 'ocr\menupictures\weirdpic\wpic' + str(i) + '.jpg'
-#     file_name = 'weirdfiletest' + str(i)
-#     detect_text(pic_loc, file_name)
-#     print(final_dump("ocr\menu_tests\weirdfiletest" + str(i) + ".txt",
-#                      pref_location, True, "weirdpic" + str(i)))
+# pref_location = "menu_read\\pref_sample.txt"
