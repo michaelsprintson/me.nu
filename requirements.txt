@@ -3,8 +3,8 @@ django
 pandas
 lxml
 google
-#install --upgrade google-cloud-vision
 requests
-itertools
 sklearn
 bs4
+#itertools
+#install --upgrade google-cloud-vision
