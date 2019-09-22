@@ -18,11 +18,12 @@ from datetime import datetime
 
 
 
-#os.chdir("/Users/shjan/Coding/me.nu/")
+os.chdir("/Users/shjan/Coding/me.nu/")
 # os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
 
 # os.chdir("/Users/michaelsprintson/Documents/GitHub/me.nu/menu_read/")
-os.chdir("/app/")
+
+# os.chdir("/app/")
 
 def overall(food, pic_loc,pref):
 
