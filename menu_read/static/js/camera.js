@@ -12,12 +12,8 @@ window.onload = show_cam;
 
 function take_snapshot() {
     Webcam.snap( function(data_uri) {
-        document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
-
         Webcam.upload( data_uri, '/saveImage', function(code, text) {
             console.log(code);
-			// 'code' will be the HTTP response code from the server, e.g. 200
-			// 'text' will be the raw response content
 		} );
         window.location.href = '/loading';
     } );
