@@ -16,7 +16,7 @@ import sys
 
 # os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
 # os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
-os.chdir("/app/menu_read/")
+os.chdir("/app/")
 # os.chdir("/Users/michaelsprintson/Documents/GitHub/me.nu/menu_read/")
 
 
