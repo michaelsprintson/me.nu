@@ -98,11 +98,12 @@ def filter(menu_dict, user_pref):
     # budget = 100.0
 
     eats_meat = not pref['diet-veg'] in ['True']
-    user_likes = (pref['diet-exclude'].strip().split())
+    takeout_pref = (pref['diet-exclude'].strip().split(','))
 
     # filters out dishes based on vegetarian status and budget
     meats = ["Beef", "Pork", "Duck", "Chicken", "Lamb", "Blood", "Lung",
-             "Meat", "Fish", "Clam", "Tripe", "Prawn", "Rib", "Tilapia"]
+             "Meat", "Fish", "Clam", "Tripe", "Prawn", "Rib", "Tilapia", "Rabbit", "Bacon"]
+
     newdict = {}
     meatcontentbool = {dish:False for dish in menu_dict}
     for dish in menu_dict:
@@ -117,7 +118,17 @@ def filter(menu_dict, user_pref):
         kept = [dish for (dish,boool) in meatcontentbool.items() if boool == False]
         for keptmeal in kept:
             newdict[keptmeal] = menu_dict[keptmeal]
-    return newdict
+
+    finaldict= {} # filter out dishes specified as bad by user
+    for dish in newdict:
+        badstuffin = False
+        for takeout in takeout_pref:
+            if takeout.lower() in dish.lower():
+                badstuffin = True
+        if not badstuffin:
+            finaldict[dish] = newdict[dish]
+
+    return finaldict
 
 
 def final_dump(menu, pref, dump, dumpsavename):
