@@ -56,7 +56,7 @@
 									<h3>Budget</h3>
 								</header>
 								<p>How much are you looking to spend on a single dish?</p>
-								<input type="text" name="budget" value="15">
+								<input type="text" name="budget" value="{{ user_preferences['budget'] }}">
 
 								<br />
 
@@ -64,26 +64,44 @@
 									<h3>Dietary Restrictions</h3>
 								</header>
 								<div>Are you vegetarian?<br />
-									<input type="radio" id="yesVeg" name="diet-veg" value="True">
-									<label for="yesVeg">Yes</label>
-									<input type="radio" id="noVeg" name="diet-veg" value="False" checked>
-									<label for="noVeg">No</label>
+									{% if user_preferences['diet-veg'] in ['False'] %}
+										<input type="radio" id="yesVeg" name="diet-veg" value="True">
+										<label for="yesVeg">Yes</label>
+										<input type="radio" id="noVeg" name="diet-veg" value="False" checked>
+										<label for="noVeg">No</label>
+									{% else %}
+										<input type="radio" id="yesVeg" name="diet-veg" value="True" checked>
+										<label for="yesVeg">Yes</label>
+										<input type="radio" id="noVeg" name="diet-veg" value="False">
+										<label for="noVeg">No</label>
+									{% endif %}
+
 								</div>
 
 								<div>Are you allergic to tree nuts?<br />
-									<input type="radio" id="yesNut" name="diet-nut" value="True">
-									<label for="yesNut">Yes</label>
-									<input type="radio" id="noNut" name="diet-nut" value="False" checked>
-									<label for="noNut">No</label>
+									{% if user_preferences['diet-nut'] in ['False'] %}
+										<input type="radio" id="yesNut" name="diet-nut" value="True">
+										<label for="yesNut">Yes</label>
+										<input type="radio" id="noNut" name="diet-nut" value="False" checked>
+										<label for="noNut">No</label>
+									{% else %}
+										<input type="radio" id="yesNut" name="diet-nut" value="True" checked>
+										<label for="yesNut">Yes</label>
+										<input type="radio" id="noNut" name="diet-nut" value="False">
+										<label for="noNut">No</label>
+									{% endif %}
 								</div>
 
 								<div>Enter any foods you would like to exclude (separated by commas).
-									<input type="text" name="diet-exclude" value="chili, peanut">
+									<input type="text" name="diet-exclude" value="{{ user_preferences['diet-exclude'] }}">
 								</div>
 								<br />
 								<ul class="actions stacked">
 									<li><input type="submit" class="button primary fit" value="Save Preferences"></li>
 								</ul>
+								{% if did_update %}
+									<p>{{ submission_message }}</p>
+								{% endif %}
 							</form>
 
 							<header class="major">
