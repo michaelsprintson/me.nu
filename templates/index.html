@@ -16,7 +16,7 @@
 						<header id="header" style="padding-top: 3.5em">
 							<div style="text-align: center;">
 								<span style="float: left;"><a href="/" style="border-bottom: none;"><img src="{{ url_for('static', filename='images/menuLogo.png') }}" alt="" style="max-height: 40px;"/></a></span>
-								<span style="float: right; padding-top: 12px;">Logged in as <strong>Timothy</strong></span>
+								<span style="float: right; padding-top: 12px;">Logged in as <strong>Colin</strong></span>
 							</div>
 						</header>
 
@@ -46,40 +46,40 @@
 							<header class="major">
 								<h2>User Preferences</h2>
 							</header>
+							<form method=post>
+								<header class="major">
+									<h3>Budget</h3>
+								</header>
+								<p>How much are you looking to spend on a single dish?</p>
+								<input type="text" name="budget" value="15">
 
-							<header class="major">
-								<h3>Budget</h3>
-							</header>
-							<p>How much are you looking to spend on a single dish?</p>
-							<input type="text" name="budget" value="15">
+								<br />
 
-							<br />
+								<header class="major">
+									<h3>Dietary Restrictions</h3>
+								</header>
+								<div>Are you vegetarian?<br />
+									<input type="radio" id="yesVeg" name="diet-veg" value="True">
+									<label for="yesVeg">Yes</label>
+									<input type="radio" id="noVeg" name="diet-veg" value="False" checked>
+									<label for="noVeg">No</label>
+								</div>
 
-							<header class="major">
-								<h3>Dietary Restrictions</h3>
-							</header>
-							<div>Are you vegetarian?<br />
-								<input type="radio" id="yesVeg" name="diet-veg">
-								<label for="yesVeg">Yes</label>
-								<input type="radio" id="noVeg" name="diet-veg" checked>
-								<label for="noVeg">No</label>
-							</div>
+								<div>Are you allergic to tree nuts?<br />
+									<input type="radio" id="yesNut" name="diet-nut" value="True">
+									<label for="yesNut">Yes</label>
+									<input type="radio" id="noNut" name="diet-nut" value="False" checked>
+									<label for="noNut">No</label>
+								</div>
 
-							<div>Are you allergic to tree nuts?<br />
-								<input type="radio" id="yesNut" name="diet-nut">
-								<label for="yesNut">Yes</label>
-								<input type="radio" id="noNut" name="diet-nut" checked>
-								<label for="noNut">No</label>
-							</div>
-
-							<div>Enter any foods you would like to exclude (separated by commas).
-								<input type="text" name="diet-exclude" value="chili, peanut">
-							</div>
-							<br />
-
-							<ul class="actions stacked">
-								<li><a href="#" class="button primary fit">Save Preferences</a></li>
-							</ul>
+								<div>Enter any foods you would like to exclude (separated by commas).
+									<input type="text" name="diet-exclude" value="chili, peanut">
+								</div>
+								<br />
+								<ul class="actions stacked">
+									<li><input type="submit" class="button primary fit" value="Save Preferences"></li>
+								</ul>
+							</form>
 
 							<header class="major">
 								<h3>Past Meals You've Liked</h3>

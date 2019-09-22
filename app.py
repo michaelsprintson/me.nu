@@ -1,4 +1,5 @@
 import os
+import json
 from flask import Flask, flash, render_template, request, redirect, url_for, send_from_directory
 from werkzeug.utils import secure_filename
 
@@ -9,8 +10,17 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def index():
+    if request.method == 'POST':
+        json.dump(request.form, open('preferencesData.json', 'w'))
+        # extract form data
+        # write to txt file
+    return render_template('index.html')
+
+
+@app.route('/savePreferences', methods=['POST', 'GET'])
+def save_preferences():
     return render_template('index.html')
 
 
