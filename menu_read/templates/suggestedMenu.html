@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+	<!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <!-- Header -->
+                <header id="header" style="padding-top: 3.5em">
+                    <div style="text-align: center;">
+                        <span style="float: left;"><a href="/" style="border-bottom: none;"><img src="{{ url_for('static', filename='images/menuLogo.png') }}" alt="" style="max-height: 40px;"/></a></span>
+                        <span style="float: right; padding-top: 12px;">Logged in as <strong>Colin</strong></span>
+                    </div>
+                </header>
+                <section>
+                    <header class="major">
+                        <h2>Suggested Menu</h2>
+                    </header>
+                    <div class="posts">
+                        <article>
+                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>
+                            <h3>Mala Sichuan Bistro</h3>
+                            <ul class="actions">
+                                <li><a href="/takePic" class="button">Select</a></li>
+                            </ul>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>
+                            <h3>East West Tea</h3>
+                            <ul class="actions">
+                                <li><a href="#" class="button">Select</a></li>
+                            </ul>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /></a>
+                            <h3>JINYA Ramen</h3>
+                            <ul class="actions">
+                                <li><a href="#" class="button">Select</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,88 @@
+perol Dish
+8.95 
+A1 Couples Lung Slices
+A2 Garlic Bacon
+A3 Red Oil Rabbit
+A4 Funky Stick Chicken
+A5 Green Onion Oil Shrimp
+7.95 
+7.95 
+7.95 
+8.95 
+8.95 
+A7 Mala Beef Jerky
+A8 Mala Beef Tendon
+A9 House Special Sculpted Kidney
+A10 Mouth-Watering Chicken
+A11 Spicy Beef Tripes
+A12 Peppercorn Arctic Surf Clams
+7.95 
+7.95 
+10.95 
+8.95 
+8.95 
+7.95 
+A13 
+Golde Needle Thousand Leave
+6.95 
+Chillin Cucumber Sticks
+Chille Tofu Skin
+Sesam Shoots
+A14 
+6.95 
+A15 
+6.95 
+A16 
+6.95 
+A17 
+Mal Bamboo Shoots
+Loca 
+ 
+X1 House Special Cold Noodle
+X2 Sour and Spicy Intestine Noodle
+X3 Dan Dan Noodle
+X4 Chengdu Mung Bean Jelly
+X5 Sweet Soft Tofu
+6.95 
+5.95 
+6.95 
+5.95 
+4.95 
+X6 
+Ho and Sour Soft Tofu
+4.95 
+(8 Red Oil Dumplings
+(10 Red Oil Wontons
+(10 Original Wontons
+X7 
+6.95 
+X8 
+6.95 
+X9 
+6.95 
+Por 
+P1 Shredded Pork Spicy Garlic Sauce
+P2 Shredded Pork with Bamboo Shoots
+P3 Shredded Pork with Spiced Dry Tofu
+P4 Saut Shredded Pork Bean Sauce
+P5 Saut Pork Bacon and Veggies
+P6 Twice Cooked Pork
+P7 Stir Fried Pork Kidneys
+P8 Prosper
+10.95 
+10.95 
+10.95 
+11.95 
+11.95 
+11.95 
+11.95 
+P9 
+Crisp and Spicy Pork Intestines
+11.95 
+P10 Basil Intestines
+11.95 
+P11 
+Ant the Tree
+11.95 
+10.95 
+ 

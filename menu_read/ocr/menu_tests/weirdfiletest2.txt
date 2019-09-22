@@ -1,0 +1,87 @@
+os 
+H1 Top Notch Pot the Outlaws
+H2 Sauerkraut Fish and Lamb Pot
+H3 Country Style Blood Curd Dish
+H4 Devourable Beef Pot
+H5 Spicy and Crispy Chicken
+H6 Konjac Duck Stew
+H7 Konjac Beef
+H8 Lotus Tofu
+H9 Three Pepper Beaten Duck
+H10 Tea Smoked Duck
+H11 Four Joy Lion Head
+H12 Fragrant Ribs
+31.95 
+T1 
+24.95 
+T2 
+14.95 
+T3 
+13.95 
+T4 
+12.95 
+T5 
+12.95 
+T6 
+12.95 
+11.95 
+13.95 
+13.95 
+12.95 
+12.95 
+S1 
+S2 
+S 
+ 
+F1 Northern Boiling Fish
+F2 Fish Pot
+F3 Chengdu Style Pot Roasted Tilapia
+F4 Mala Pot Roasted Tilapia
+F5 Bean Curd Tilapia Stew
+F7 Pot Roasted Black Bean Tilapia
+F12 Steamed Tilapia
+F9 Sweet and Sour Crispy Tilapia
+F10 Scallion Pot Roasted Tilapia
+S4 
+20.95 
+S5 
+20.95 
+ 
+18.95 
+18.95 
+18.95 
+18.95 
+18.95 
+18.95 
+18.95 
+Bea and Lamb
+ 
+B1 Water Boiled Beef
+ Cumin Beef
+B3 Black Pepper Beef
+B4 Mala Beef Tofu
+B5 Mongolian Beef
+DB6 Crispy Mala Beef
+B7 Baby Pepper Black Bean Beef
+B8 Baby Pepper and Shredded Beef
+B9 Satay Beef
+B12 Sauteed Lamb with Veggies
+D Cumin Lamb
+13.95 
+13.95 
+5 
+13.95 
+13.95 
+13.95 
+13.95 
+5 
+13.95 
+13.95 
+5 
+13.95 
+15 
+16.95 
+5 
+16.95 
+95 
+ 

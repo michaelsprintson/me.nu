@@ -1,0 +1,78 @@
+Apetige 
+ 
+A1 Couples Lung Slices
+A2 Garlic Bacon
+A3 Red Oil Rabbit
+A4 Funky Stick Chicken
+A5 Green Onion Oil Shrimp
+8.95 
+7.95 
+7.95 
+7.95 
+8.95 
+A7 Mala Beef Jerky
+A8 Mala Beef Tendon
+A9 House Special Sculpted Kidney
+A10 Mouth-Watering Chicken
+A11 Spicy Beef Tripes
+A12 Peppercorn Arctic Surf Clams
+A13 Golden Needle Thousand Leave
+A14 Cucumber Sticks
+A15 Chilled Tofu
+A16 Sesame Bamboo Shoots
+A17 Mala Bamboo Shoots
+8.95 
+7.95 
+7.95 
+10.95 
+8.95 
+8.95 
+7.95 
+6.95 
+6.95 
+6.95 
+6.95 
+Leca 
+ 
+X1 House Special Cold Noodle
+X2 Sour and Spicy Intestine Noodle
+X3 Dan Dan Noodle
+X4 Chengdu Mung Bean Jelly
+X5 Sweet Soft Tofu
+X6 Hot and Sour Soft Tofu
+7 Red Oil Dumplings
+X8 Red Oil Wontons
+X9 Original Wontons
+6.95 
+5.95 
+6.95 
+5.95 
+4.95 
+4.95 
+6.95 
+6.95 
+6.95 
+Por 
+P1 Shredded Pork Spicy Garlic Sauce
+P2 Shredded Pork with Bamboo Shoots
+P3 Shredded Pork with Spiced Dry Tofu
+P4 Saut Shredded Pork Bean Sauce
+P5 Saut Pork Bacon and Veggies
+P6 Twice Cooked Pork
+P7 Fried Pork Kidneys
+P8 Prosper
+P9 Crispy and Spicy Pork Intestines
+P10 Basil Intestines
+P11 Ants the Tree
+10.95 
+10.95 
+10.95 
+11.95 
+11.95 
+11.95 
+11.95 
+11.95 
+11.95 
+11.95 
+10.95 
+ 
