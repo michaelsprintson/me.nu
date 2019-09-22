@@ -21,9 +21,9 @@ def load_words(filename):
 
 def detect_text(path, savepath):
     """Detects text in the file."""
-    d = load_words('ocr/wa.txt')
+    d = load_words('menu_read/ocr/wa.txt')
 
-    file1 = io.open("ocr/menu_tests/" + savepath +
+    file1 = io.open("menu_read/ocr/menu_tests/" + savepath +
                     ".txt", "w", encoding="utf-8")
     client = vision.ImageAnnotatorClient()
 
