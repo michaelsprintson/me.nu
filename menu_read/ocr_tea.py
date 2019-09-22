@@ -6,7 +6,7 @@ import re
 from google.cloud import vision
 
 # set environment variable for google api credential
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] =  "apikey.json"
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] =  "apikey.json"
 
 
 """
