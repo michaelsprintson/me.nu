@@ -289,7 +289,7 @@ def overall(food, pic_loc,pref):
     x = itemratings[['totalscore']].values.astype(float) #processing to scale scores between 0 and 10 for a ranking system
     itemrating_scaled = min_max_scaler.fit_transform(x)
     itemratings['totalscore'] = [math.ceil(10* x[0]) for x in itemrating_scaled]
-    itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).T.to_json('ranking.json') #send results to JSON
+    itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).T.to_json('menu_read/ranking.json') #send results to JSON
 
 def run():
     food = True
