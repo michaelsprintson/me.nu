@@ -1,0 +1,48 @@
+T1 Crab Meat and Asparagus Soup
+T2 Fish Fillet and Sauerkraut Soup
+T3 West Lake Soup
+T4 Melon and Meatball Soup
+T5 Egg and Tomato Soup
+T6 Hot and Sour Soup
+9.95 
+8.95 
+8.95 
+8.95 
+8.95 
+8.95 
+eafoo 
+S1 Mala Pot Roasted Prawns
+S2 Chengdu Style Pot Roasted Prawns
+S3 Simmered Prawns with Veggies
+S4 Salt and Pepper Prawns
+S5 Water Boiled Fish Fillet
+S6 Fish Fillet with Pickled Pepper
+S7 Celery Fish Fillet
+S8 Sweet Wine Fish Fillet
+S9 Mala Fish Fillet with Super Soft Tofu
+S10 Shrimp with Asparagus
+S11 Shrimp with Tofu
+17.95 
+17.95 
+17.95 
+17.95 
+13.95 
+12.95 
+12.95 
+12.95 
+12.95 
+11.95 
+10.95 
+Chicke 
+ 
+C1 Kung Chicken
+C2 Pepper Chicken
+C3 Celery Chicken
+C4 Crispy Chicken
+C6 Chicken Leg with Serrano Peppers
+11.95 
+10.95 
+10.95 
+11.95 
+10.95 
+ 

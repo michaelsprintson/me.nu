@@ -1,0 +1,66 @@
+MENU 
+Fruit Tea
+3.75 
+Mango Green Tea
+Grapefruit Green Tea
+Honey Lemon with Aloe Vera
+Wintermelon with Lemon Juice
+Strawberry Black Tea
+Pineapple Green Tea with Jelly
+Hawali Fruit Tea
+Fresh Milk
+3.75 
+Fresh Milk
+3.75 
+3.75 
+Wintermelon with Fresh Milk
+3.75 
+3.75 
+hor 
+Cocoa Lover
+Boba Fresh Milk
+4.00 
+4.00 
+4.00 
+Matcha with Fresh Milk
+Handmade Taro with Fresh Milk
+4.00 
+4.25 
+4.25 
+4.25 
+Kiwi Fruit Tea with Jelly
+Mango Fruit Green Tea
+Whole Lemon Black Tea Green Tea
+Passion Orange Grapefruit Tea
+4.25 
+Creama 
+Creama Tea
+4.00 
+4.00 
+Brewed Tea
+Wintermelon Tea
+Coffee 
+Cocoa 
+4.00 
+3.25 
+Classic Black Tea
+Classic Green Tea
+Classic Oolong Tea
+Wintermelon Tea
+Honey Tea
+Ginger Tea
+4.25 
+3.25 
+Mango Green Tea
+Matcha Green Tea
+4.25 
+3.25 
+4.25 
+3.00 
+3.25 
+Recommended Hot Available
+3.50 
+Sharetea 
+Share 
+ 
+ 
