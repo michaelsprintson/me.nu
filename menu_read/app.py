@@ -24,20 +24,20 @@ def choose_menu():
     return render_template('chooseMenu.html')
 
 
-@app.route('/takePicMala')
-def take_pic_mala():
+@app.route('/takePicMala/<pic_error>')
+def take_pic_mala(pic_error):
     text_file = open("foodChoice.txt", "w")
     text_file.write("True")
     text_file.close()
-    return render_template('takePic.html')
+    return render_template('takePic.html', pic_error=pic_error)
 
 
-@app.route('/takePicSharetea')
-def take_pic_sharetea():
+@app.route('/takePicSharetea/<pic_error>')
+def take_pic_sharetea(pic_error):
     text_file = open("foodChoice.txt", "w")
     text_file.write("False")
     text_file.close()
-    return render_template('takePic.html')
+    return render_template('takePic.html', pic_error=pic_error)
 
 
 def allowed_file(filename):
@@ -89,35 +89,33 @@ def suggested_menu():
     foodChoice = open("foodChoice.txt", "r")
     food = foodChoice.readline() in ['True']
 
-    # Get menu pic
-
-    # Get user preferences
-
-    # food = True
+    # Get image
     pic_loc = 'static/webcam.jpg'
+
+    # Get preferences
     pref = "preferencesData.json"
 
-    # Analyze menu
-    reviewparse.overall(food, pic_loc, pref)
-
-    # Filter top results
-    menu_data = json.load(open('ranking.json'))
-    top_items = []
-    other_items = []
-    i = 0
-    for menu_item in menu_data:
-        if i < 3:
-            top_items.append(menu_item)
-        else:
-            other_items.append(menu_item)
-        i += 1
-    return render_template('suggestedMenu.html', topItems=top_items, otherItems=other_items, menuData=menu_data)
-
-
-@app.route('/foo')
-def foo():
-    test = 'asdfasdf'
-    return render_template('foo.html', content=test)
+    # Analyze menu, catch OCR error
+    try:
+        reviewparse.overall(food, pic_loc, pref)
+        # Filter top results
+        menu_data = json.load(open('ranking.json'))
+        top_items = []
+        other_items = []
+        i = 0
+        for menu_item in menu_data:
+            if i < 3:
+                top_items.append(menu_item)
+            elif len(other_items) < 7:
+                other_items.append(menu_item)
+            i += 1
+        return render_template('suggestedMenu.html', topItems=top_items, otherItems=other_items, menuData=menu_data)
+    except:
+        if food:
+            # Mala
+            return redirect(url_for('take_pic_mala', pic_error=True))
+        # Sharetea
+        return redirect(url_for('take_pic_sharetea', pic_error=True))
 
 
 if __name__ == "__main__":

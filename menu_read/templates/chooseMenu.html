@@ -23,17 +23,17 @@
                     </header>
                     <div class="posts">
                         <article>
-                            <a href="/takePicMala" class="image"><img src="{{ url_for('static', filename='images/malaFood.jpg') }}" alt="" /></a>
+                            <a href="{{ url_for('take_pic_mala', pic_error=True) }}" class="image"><img src="{{ url_for('static', filename='images/malaFood.jpg') }}" alt="" /></a>
                             <h3>Mala Sichuan Bistro</h3>
                             <ul class="actions">
-                                <li><a href="/takePicMala" class="button">Select</a></li>
+                                <li><a href="{{ url_for('take_pic_mala', pic_error=True) }}" class="button">Select</a></li>
                             </ul>
                         </article>
                         <article>
-                            <a href="/takePicSharetea" class="image"><img src="{{ url_for('static', filename='images/sharetea.png') }}" alt="" /></a>
+                            <a href="{{ url_for('take_pic_sharetea', pic_error=True) }}" class="image"><img src="{{ url_for('static', filename='images/sharetea.png') }}" alt="" /></a>
                             <h3>Sharetea</h3>
                             <ul class="actions">
-                                <li><a href="/takePicSharetea" class="button">Select</a></li>
+                                <li><a href="{{ url_for('take_pic_sharetea', pic_error=True) }}" class="button">Select</a></li>
                             </ul>
                         </article>
                     </div>
