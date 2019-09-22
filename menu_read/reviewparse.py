@@ -14,6 +14,8 @@ import math
 from sklearn import preprocessing
 import sys
 
+
+
 # os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
 # os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
 os.chdir("/app/")
@@ -25,13 +27,13 @@ def overall(food, pic_loc,pref):
 
     if food:
         webpage = 'https://www.yelp.com/biz/mala-sichuan-bistro-houston-3'
-        import menu_read.ocr_food as ocr
-        import menu_read.just_read_food as jr
+        from menu_read import ocr_food as ocr
+        from menu_read import just_read_food as jr
         pid = 'ChIJNc4K5cTCQIYRe9OyIN7DcGE'
     else:
         webpage = 'https://www.yelp.com/biz/sharetea-houston-2'
-        import menu_read.ocr_tea as ocr
-        import menu_read.just_read_tea as jr
+        from menu_read import ocr_tea as ocr
+        from menu_read import just_read_tea as jr
         pid = 'ChIJjfzjCM_CQIYRPA546CYaE4A'
 
 

@@ -1,7 +1,7 @@
 import os
 import json
 from flask import Flask, flash, render_template, request, redirect, url_for, send_from_directory
-import menu_read.reviewparse
+import menu_read.reviewparse as rp
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = './static'
@@ -96,7 +96,7 @@ def suggested_menu():
     pref = "menu_read/preferencesData.json"
 
     # Analyze menu
-    reviewparse.overall(food, pic_loc, pref)
+    rp.overall(food, pic_loc, pref)
 
     # Filter top results
     menu_data = json.load(open('menu_read/ranking.json'))
