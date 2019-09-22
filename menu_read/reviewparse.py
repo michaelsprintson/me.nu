@@ -403,14 +403,14 @@ def overall(food, pic_loc,pref):
     itemratings[['totalscore','price']].sort_values(by = ['totalscore'],ascending = False).T.to_json('ranking.json')
 
 
-# def run():
-food = True
+def run():
+    food = True
 
-#pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
-pic_loc = 'menu_read/ocr/menupictures/pic7.jpg'
+    #pic_loc = 'ocr/menupictures/othermenu/teamenu.jpg'
+    pic_loc = 'menu_read/ocr/menupictures/pic7.jpg'
 
-pref = 'menu_read/preferencesData.json'
+    pref = 'menu_read/preferencesData.json'
 
-overall(food, pic_loc, pref)
+    overall(food, pic_loc, pref)
 
 
