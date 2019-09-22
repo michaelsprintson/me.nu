@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a5a2512-17e0-4766-a3f5-f18b98ccb1ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allfoods.json" beforeDir="false" afterPath="$PROJECT_DIR$/allfoods.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu_parse/reviewparse.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/menu_parse/reviewparse.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reviewparse.py" beforeDir="false" afterPath="$PROJECT_DIR$/reviewparse.py" afterDir="false" />
-    </list>
+    <list default="true" id="2a5a2512-17e0-4766-a3f5-f18b98ccb1ae" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +15,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/reviewparse.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
+                <state relative-caret-position="373">
                   <caret line="399" column="40" selection-start-line="399" selection-start-column="40" selection-end-line="399" selection-end-column="40" />
                   <folding>
                     <element signature="e#2#21#0" expanded="true" />
@@ -301,7 +296,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reviewparse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="373">
           <caret line="399" column="40" selection-start-line="399" selection-start-column="40" selection-end-line="399" selection-end-column="40" />
           <folding>
             <element signature="e#2#21#0" expanded="true" />
