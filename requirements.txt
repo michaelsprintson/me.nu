@@ -7,4 +7,4 @@ requests
 sklearn
 bs4
 #itertools
-#install --upgrade google-cloud-vision
+install --upgrade google-cloud-vision
