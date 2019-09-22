@@ -1,7 +1,7 @@
 import os
 import json
 from flask import Flask, flash, render_template, request, redirect, url_for, send_from_directory
-import reviewparse
+import menu_read.reviewparse
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = './static'
@@ -15,7 +15,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def index():
     if request.method == 'POST':
         if request.form['budget'].isdigit():
-            json.dump(request.form, open('preferencesData.json', 'w'))
+            json.dump(request.form, open('menu_read/preferencesData.json', 'w'))
     return render_template('index.html')
 
 
@@ -26,7 +26,7 @@ def choose_menu():
 
 @app.route('/takePicMala')
 def take_pic_mala():
-    text_file = open("foodChoice.txt", "w")
+    text_file = open("menu_read/foodChoice.txt", "w")
     text_file.write("True")
     text_file.close()
     return render_template('takePic.html')
@@ -34,7 +34,7 @@ def take_pic_mala():
 
 @app.route('/takePicSharetea')
 def take_pic_sharetea():
-    text_file = open("foodChoice.txt", "w")
+    text_file = open("menu_read/foodChoice.txt", "w")
     text_file.write("False")
     text_file.close()
     return render_template('takePic.html')
@@ -86,20 +86,20 @@ def loading():
 @app.route('/suggestedMenu')
 def suggested_menu():
     # Get food T/F
-    foodChoice = open("foodChoice.txt", "r")
+    foodChoice = open("menu_read/foodChoice.txt", "r")
     food = foodChoice.readline() in ['True']
 
     # Get image
-    pic_loc = 'static/webcam.jpg'
+    pic_loc = 'menu_read/static/webcam.jpg'
 
     # Get preferences
-    pref = "preferencesData.json"
+    pref = "menu_read/preferencesData.json"
 
     # Analyze menu
     reviewparse.overall(food, pic_loc, pref)
 
     # Filter top results
-    menu_data = json.load(open('ranking.json'))
+    menu_data = json.load(open('menu_read/ranking.json'))
     top_items = []
     other_items = []
     i = 0

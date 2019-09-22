@@ -1,1 +1,1 @@
-web: python menu_read/app.py
+web: python app.py
