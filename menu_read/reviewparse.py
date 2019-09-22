@@ -13,6 +13,7 @@ import os
 import math
 import sys
 
+#os.chdir("/Users/shjan/Coding/me.nu/menu_read/")
 os.chdir("/Users/timothygoh/PycharmProjects/me.nu/menu_read/")
 
 
