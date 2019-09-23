@@ -27,6 +27,6 @@ We wrote this algorithm for our program to rate each dish from the menu input. I
 4. Start the server with ```python3 app.py```
 
 ## Team
-Me.nu was created by Timothy Goh (tGoh98), Michael Sprintson (michaelsprintson), Seung Hun Jang (sj43), and Colin King (colinbking) for HackRice9. Read more about it in the [Devpost](https://devpost.com/software/me-nu). Presentation slides can be found (here)[https://docs.google.com/presentation/d/1TuNCihdM04-Vg7iJvhlEi2cJuIjqjIYcAnWkSz_xGfo/edit?usp=sharing].
+Me.nu was created by Timothy Goh (tGoh98), Michael Sprintson (michaelsprintson), Seung Hun Jang (sj43), and Colin King (colinbking) for HackRice9. Read more about it in the [Devpost](https://devpost.com/software/me-nu). Presentation slides can be found [here](https://docs.google.com/presentation/d/1TuNCihdM04-Vg7iJvhlEi2cJuIjqjIYcAnWkSz_xGfo/edit?usp=sharing).
 
 ![Me.nu Logo](https://github.com/michaelsprintson/me.nu/blob/tim/menu_read/static/images/menuLogo.png)
