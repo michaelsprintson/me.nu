@@ -3,7 +3,7 @@
 *Me.nu is a web application optimized for mobile platforms that creates individually-tailored menus. It uses
  Yelp, Google Reviews, and user-specific preferences to determine the perfect recommendations for me n you.* 
  
- Me.nu won first place overall at HackRice 9!
+ Me.nu won first place overall at HackRice 9! [(presentation and demo link)](https://docs.google.com/presentation/d/1TuNCihdM04-Vg7iJvhlEi2cJuIjqjIYcAnWkSz_xGfo/edit?usp=sharing)
  
 ## Features
 * Uses Google Vision API's Optical Character Recognition to parse a menu
